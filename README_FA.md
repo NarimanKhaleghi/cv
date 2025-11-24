@@ -67,7 +67,7 @@
 
 1.  **کلون کردن مخزن:**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    git clone [https://github.com/NarimanKhaleghi/cv.git](https://github.com/NarimanKhaleghi/cv.git)
     ```
 2.  **باز کردن `index.html`:**
     شما می‌توانید این فایل را در هر ویرایشگر کدی (VS Code, Sublime و غیره) ویرایش کنید.
