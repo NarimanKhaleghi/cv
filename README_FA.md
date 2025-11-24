@@ -4,11 +4,11 @@
 ---
 <div align="center">
     <h1>💎 قالب رزومه گلس‌مورفیسم</h1>
-    
-    [![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=safari)](https://cv.narimankhaleghi.ir)
-    [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-    [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-    [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+  
+  [![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=safari)](https://cv.narimankhaleghi.ir)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 </div>
 یک قالب رزومه/پورتفولیوی شخصی تک‌صفحه‌ای خیره‌کننده که دارای طراحی **گلس‌مورفیسم (Glassmorphism)**، انیمیشن‌های تعاملی و پشتیبانی کامل **دو زبانه (انگلیسی و فارسی)** است. این پروژه با **HTML5** و **Tailwind CSS** ساخته شده است. این قالب سبک‌وزن به گونه‌ای طراحی شده که به راحتی قابل شخصی‌سازی باشد و بتوان آن را مستقیماً و بدون نیاز به هیچ پروسه بیلد (Build Process) روی GitHub Pages منتشر کرد.
 
