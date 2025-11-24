@@ -67,7 +67,7 @@ The entire project is contained within a single `index.html` file for simplicity
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    git clone https://github.com/NarimanKhaleghi/cv.git
     ```
 2.  **Open `index.html`:**
     You can edit this file in any code editor (VS Code, Sublime, etc.).
