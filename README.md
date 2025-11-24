@@ -1,8 +1,10 @@
-* **[English](README.md)** | * **[فارسی](README_FA.md)**
-
+<div align="center">
+   **[English](README.md)** | **[فارسی](README_FA.md)**
+</div>
 ---
-
-# 💎 Glassmorphism Resume Template
+<div align="center">
+   # 💎 Glassmorphism Resume Template
+</div>
 
 [![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=safari)](https://cv.narimankhaleghi.ir)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
