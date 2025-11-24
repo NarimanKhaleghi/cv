@@ -1,3 +1,7 @@
+* **[English](README.md)** | * **[فارسی](README_FA.md)**
+
+---
+
 # 💎 Glassmorphism Resume Template
 
 [![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=safari)](https://cv.narimankhaleghi.ir)
