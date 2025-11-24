@@ -4,12 +4,12 @@
 ---
 <div align="center">
    <h1>💎 Glassmorphism Resume Template</h1>
-</div
-
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=safari)](https://cv.narimankhaleghi.ir)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+  
+  [![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=safari)](https://cv.narimankhaleghi.ir)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+</div>
 
 A stunning, single-page personal resume/portfolio template featuring a **Glassmorphism** design, interactive animations, and full bilingual support (English & Persian). Built with **HTML5** and **Tailwind CSS**, this lightweight template is designed to be easily customizable and deployed directly to GitHub Pages without any build process.
 
