@@ -14,8 +14,9 @@
 A stunning, single-page personal resume/portfolio template featuring a **Glassmorphism** design, interactive animations, and full bilingual support (English & Persian). Built with **HTML5** and **Tailwind CSS**, this lightweight template is designed to be easily customizable and deployed directly to GitHub Pages without any build process.
 
 ---
+
 <div align=center>
-  <img width=90% alt="nariman khaleghi resume and portfolio demo" src="images/demo.jpg">
+  <img width=100% alt="nariman khaleghi resume and portfolio demo" src="images/demo.jpg">
 </div>
 
 ---
