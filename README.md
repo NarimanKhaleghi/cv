@@ -17,6 +17,7 @@ A stunning, single-page personal resume/portfolio template featuring a **Glassmo
   <img width=90% alt="nariman khaleghi resume and portfolio demo" src="images/demo.jpg">
 
 </div>
+
 > **View Live Demo:** [cv.narimankhaleghi.ir](https://cv.narimankhaleghi.ir)
 
 ## ✨ Key Features
