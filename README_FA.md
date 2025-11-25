@@ -12,11 +12,13 @@
 </div>
 
 یک قالب رزومه/پورتفولیوی شخصی تک‌صفحه‌ای خیره‌کننده که دارای طراحی **گلس‌مورفیسم (Glassmorphism)**، انیمیشن‌های تعاملی و پشتیبانی کامل **دو زبانه (انگلیسی و فارسی)** است. این پروژه با **HTML5** و **Tailwind CSS** ساخته شده است. این قالب سبک‌وزن به گونه‌ای طراحی شده که به راحتی قابل شخصی‌سازی باشد و بتوان آن را مستقیماً و بدون نیاز به هیچ پروسه بیلد (Build Process) روی GitHub Pages منتشر کرد.
+
 <br>
 <div align=center>
   <img width=100% alt="nariman khaleghi resume and portfolio demo" src="images/demo.jpg">
 </div>
 <br>
+
 > **مشاهده دمو زنده:** [cv.narimankhaleghi.ir](https://cv.narimankhaleghi.ir)
 
 ## ✨ ویژگی‌های کلیدی
