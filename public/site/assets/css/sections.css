@@ -117,6 +117,10 @@ html[data-lang="fa"] .monogram .m-nk{ font-family:var(--font-display-en); letter
   .stk-1{ inset-inline-start:-2%; }
   .stk-2{ inset-inline-end:-2%; }
 }
+@media (max-width:640px){
+  .stk-1{ top:-2%; }
+  .hero-stickers .sticker{ font-size:.62rem; padding:7px 10px; }
+}
 
 .hero-mark{
   position:absolute; inset-inline-end:-1.5vw; bottom:8%;

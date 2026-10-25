@@ -79,7 +79,10 @@ html.has-cursor .cursor-dot,html.has-cursor .cursor-ring{ opacity:1; }
   font-size:clamp(2.6rem,9vw,5.4rem);
   line-height:.95; text-transform:uppercase;
   display:flex; flex-wrap:wrap; gap:0 .28em; overflow:hidden;
+  direction:ltr; /* Latin brand mark — always reads THE PM */
+  justify-content:flex-end;
 }
+html[dir="ltr"] .loader-brand{ justify-content:flex-start; }
 html[data-lang="fa"] .loader-brand{ text-transform:none; }
 .loader-brand .w{ display:inline-block; overflow:hidden; vertical-align:bottom; }
 .loader-brand .w > span{ display:inline-block; transform:translateY(110%); animation:ldrUp .7s var(--ease-out) forwards; }
@@ -95,13 +98,13 @@ html[data-lang="fa"] .loader-brand{ text-transform:none; }
 html[dir="rtl"] .loader-name{ letter-spacing:.14em; }
 @keyframes ldrFade{ to{ opacity:1; } }
 .loader-bar{
-  margin-top:26px; height:14px;
-  border:3px solid var(--white); padding:3px;
+  margin-top:26px; height:24px;
+  border:3px solid var(--white); padding:4px;
   opacity:0; animation:ldrFade .4s ease .45s forwards;
 }
 .loader-bar .fill{
   height:100%; width:0%; background:var(--white);
-  transition:width .3s ease;
+  transition:width .25s ease;
 }
 .loader-pct{
   margin-top:10px; font-family:var(--font-mono); font-size:.72rem;
