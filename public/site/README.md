@@ -1,133 +1,74 @@
-# NK — THE PM · Personal Site / Portfolio
+# Nariman Khaleghi — The PM · Portfolio & Journey (v2)
 
-<div dir="rtl">
+Bilingual (EN/FA) personal portfolio built as **a journey**: a minimal boarding cover, then chapters you click to unfold — career route map, skill drawers, auto-synced GitHub projects, and a résumé CTA.
 
-وبسایت رسمی و رزومه‌ای **نریمان خالقی (The PM)** — طراحی نئوبروتالیسم سیاه‌وسفید، تماماً دست‌ساز با جاوااسکریپت خالص (بدون فریم‌ورک و بدون مرحله build)، دوزبانه (فارسی/انگلیسی) با تشخیص خودکار زبان، و بخش پروژه‌هایی که **هفته‌ای یک‌بار به‌صورت خودکار از گیت‌هاب همگام می‌شود**.
-
-</div>
-
-The official site & resume of **Nariman Khaleghi (The PM)** — black & white neubrutalism, hand-built with vanilla JS (zero frameworks, zero build step), fully bilingual (FA/EN with auto-detection), with a Projects section that **auto-syncs from GitHub every week**.
+**Zero frameworks. Zero build step. Pure HTML/CSS/JS.** Drop it on any static host and it runs.
 
 ---
 
-## ✨ Features
+## ✨ v2 — What's new
 
-- 🖤 Strict black & white **neubrutalist** design system (hard shadows, thick borders, marquee bands, stickers)
-- 🎬 **Maximum motion**: cinematic loader, split-letter hero, custom cursor, count-up stats, scroll reveals, card tilt, film grain, parallax stickers — auto-toned-down on mobile & `prefers-reduced-motion`
-- 🌐 **Bilingual FA/EN** with RTL/LTR switching, browser auto-detection, saved preference (`?lang=fa` also works)
-- 📦 **Projects from GitHub** — weekly sync via GitHub Actions, language filters, featured pins, README rendered in a modal (fetched live from `raw.githubusercontent.com`)
-- 🧩 **Modular architecture** — every section is a self-contained module; content lives in two files
-- 📱 Fully responsive (mobile menu, fluid type with `clamp()`)
-- ⚡ No build step — push and it's live
+- 🌗 **Light + Dark mode** — toggle in the header, saved in `localStorage`, follows your OS preference on first visit, animated circular wipe.
+- 🎫 **Journey experience** — boarding-pass loader, chapter flight-rail (side dots), route-map career timeline that draws itself on scroll.
+- 🖱️ **Progressive disclosure** — the first screen is minimal; click any station / drawer / "read more" to unfold details.
+- 🖼️ **Real photo hero** — B/W portrait (`assets/img/profile.jpg`) with rotating ring + stickers.
+- 📄 **Résumé CTA** — everywhere (nav, cover, destination chapter) → <https://cv.thepm.ir> in a new tab (print / PDF-export ready).
+- ✈️ Flight-themed micro-copy, custom cursor, magnetic buttons, confetti easter egg (click a sticker 3×).
 
 ## 📁 Structure
 
 ```
-.
-├── index.html                  ← thin shell (metas + script order)
-├── 404.html                    ← brutalist 404
-├── CNAME                       ← custom domain (edit or delete)
-├── favicon.svg / robots.txt
+├── index.html                  ← shell; theme bootstrap; script order
+├── 404.html                    ← friendly 404
+├── robots.txt
 ├── data/
-│   ├── config.js               ← ⭐ site wiring: GitHub user, featured/excluded repos, contact channels
-│   ├── content.en.js           ← ⭐ ALL English copy (edit freely)
-│   ├── content.fa.js           ← ⭐ ALL Persian copy (edit freely)
-│   └── projects.json           ← ⚙ generated weekly (seeded manually)
+│   ├── config.js               ← ★ wiring: GitHub user, featured/excluded repos, résumé URL, contacts
+│   ├── content.en.js           ← ★ every EN string (edit freely)
+│   ├── content.fa.js           ← ★ every FA string (keep same keys)
+│   └── projects.json           ← auto-written weekly by the GitHub Action
 ├── assets/
-│   ├── css/                    ← tokens · base · components · sections · effects
-│   └── js/
-│       ├── main.js             ← ⭐ section registry (add/remove sections here)
-│       ├── core/               ← i18n · effects · cursor · markdown · utils
-│       └── sections/           ← hero, about, stats, experience, skills,
-│                                  projects, education, contact, footer, …
-├── scripts/
-│   └── fetch-projects.mjs      ← weekly sync script (no dependencies)
+│   ├── css/  tokens|base|components|sections|effects .css
+│   ├── js/
+│   │   ├── core/   util · i18n · theme · effects · cursor · md
+│   │   └── sections/ loader · nav · cover · marquee · about · numbers
+│   │                  · journey · toolbox · lab · edu · contact
+│   └── img/profile.jpg         ← replace with any square photo
+├── scripts/fetch-projects.mjs  ← GitHub → projects.json syncer
 └── .github/workflows/
-    ├── deploy-pages.yml        ← deploys the site on every push
-    └── update-projects.yml     ← ⏰ every Monday 04:30 UTC: sync repos → redeploy
+    ├── deploy-pages.yml        ← deploy on push to main
+    └── update-projects.yml     ← Mondays 04:30 UTC: refresh projects.json + redeploy
 ```
 
-<div dir="rtl">
+## 🧭 Edit the content
 
-## ✏️ ویرایش محتوا (مهم‌ترین بخش)
+| Want to change…            | Open… |
+|----------------------------|-------|
+| Any visible text (EN / FA) | `data/content.en.js` / `data/content.fa.js` |
+| GitHub username, featured/excluded repos, résumé URL, contacts | `data/config.js` |
+| Add/remove a whole chapter | add/remove its `<script>` in `index.html` + its entry in `assets/js/main.js` (`CHAPTERS`) + a `{id,no,label}` row in both content files |
+| Hero photo                 | overwrite `assets/img/profile.jpg` (square, ≥460px) |
+| Colors / spacing / fonts   | `assets/css/tokens.css` |
 
-| می‌خواهم… | کجا؟ |
-|---|---|
-| متن‌های شغلی، خلاصه، بولت‌های تجربه | `data/content.fa.js` و `data/content.en.js` → بخش `experience.jobs` |
-| دستاوردهای عددی (شمارنده‌ها) | همان فایل‌ها → بخش `stats.items` |
-| مهارت‌ها و چیپ‌ها | همان فایل‌ها → بخش `skills.groups` |
-| راه‌های تماس (ایمیل/تلگرام/واتساپ…) | `data/config.js` → `contact` (کانال جدید خودکار نمایش داده می‌شود) |
-| ریپوی منتخب (پین‌شده) | `data/config.js` → `featuredRepos` |
-| مخفی‌کردن یک ریپو | `data/config.js` → `excludeRepos` |
-| اضافه/حذف کردن یک سکشن | `assets/js/main.js` → `SECTION_ORDER` |
-| رنگ‌ها، فاصله‌ها، فونت | `assets/css/tokens.css` |
+Both languages must keep the same key structure — the site renders whichever one matches the visitor (`?lang=fa`, saved choice, or browser language).
 
-بعد از هر push، سایت به‌صورت خودکار deploy می‌شود.
+## 🚀 Deploy (GitHub Pages — repo `cv`)
 
-</div>
+1. Push this folder's contents to `github.com/<you>/cv` (branch `main`). See **PUSH-GUIDE.fa.md** for the exact commands.
+2. Repo → **Settings → Pages → Source: GitHub Actions**.
+3. Push already triggers *Deploy to GitHub Pages*. Run **Actions → Weekly projects sync → Run workflow** once to fetch your repos into `projects.json`.
+4. Site: `https://<you>.github.io/cv/`
 
-## 🚀 Deploy on GitHub Pages (3 steps)
+All internal links are **relative**, so the site also works from any other host or subdomain without edits.
 
-1. Create a repository (e.g. `nariman-portfolio`) and push **this folder's contents** to the `main` branch:
-   ```bash
-   git init && git add -A && git commit -m "feat: THE PM site"
-   git remote add origin https://github.com/NarimanKhaleghi/<repo>.git
-   git branch -M main && git push -u origin main
-   ```
-2. Repo → **Settings → Pages** → Source: **GitHub Actions**.
-3. Done. `deploy-pages.yml` deploys on every push. Run **Actions → Weekly projects sync → Run workflow** once to pull the full repo list immediately (otherwise wait for Monday's cron).
+### Optional: custom domain / subdomain
+Add a `CNAME` file containing e.g. `www.thepm.ir`, then in DNS point that record to `<you>.github.io`. (Removed by default because `thepm.ir` root already serves another repo.)
 
-> If you deploy to a **project page** (`username.github.io/<repo>/`), everything works out of the box — all paths are relative.
+## 🔄 Projects auto-sync
 
-## 🌐 Custom domain (thepm.ir)
+Every Monday 04:30 UTC (~08:00 Tehran), `update-projects.yml` runs `scripts/fetch-projects.mjs`, which reads `data/config.js`, filters out forks/empty/excluded repos, writes `data/projects.json`, commits it, and the same workflow redeploys the site. Run it manually anytime: **Actions → Weekly projects sync → Run workflow**.
 
-1. Edit `CNAME` → put your domain (`thepm.ir`).
-2. DNS at your provider: `A` records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (apex) and/or `CNAME` `www` → `<username>.github.io`.
-3. Settings → Pages → Custom domain → `thepm.ir` → enable **Enforce HTTPS**.
-4. Update `siteUrl` in `data/config.js`.
+## ♿ Notes
 
-> **Note:** thepm.ir currently serves your `blog` repo. You can instead use a subdomain (e.g. `www.thepm.ir` or `me.thepm.ir`) — same steps with a `CNAME` record pointing to `<username>.github.io`.
-
-## ☁️ Cloudflare Pages (alternative)
-
-Dashboard → Workers & Pages → Create → Pages → **Connect to Git** → pick the repo →
-Build command: *(empty)* — Output directory: `/` → Save. For the weekly sync, keep the GitHub Action enabled (it commits `data/projects.json`; Cloudflare auto-rebuilds on new commits).
-
-## 🧪 Local preview
-
-```bash
-python3 -m http.server 8000   # or: npx serve .
-# → http://localhost:8000
-```
-
-(Opening `index.html` directly via `file://` also works — even the README modal, thanks to CORS-friendly raw.githubusercontent fetches.)
-
-## 🔁 How the weekly sync works
-
-```
-GitHub Action (cron, Mondays) → scripts/fetch-projects.mjs
-  → reads data/config.js (exclude/featured/…)
-  → GET api.github.com/users/<you>/repos
-  → filters (forks, empty, excluded)
-  → writes data/projects.json → commit → redeploy
-```
-
-The README of every project is NOT stored — it is fetched **live** from `raw.githubusercontent.com` when a visitor opens the docs modal, so docs are always up to date.
-
-## 🧩 Add your own section (example)
-
-```js
-/* assets/js/sections/certificates.js */
-(function () {
-  NK.sections.certificates = {
-    render: function (c) { /* return a <section> element */ }
-  };
-})();
-```
-1. Add `<script src="assets/js/sections/certificates.js">` to `index.html` (before `main.js`)
-2. Add `"certificates"` to `SECTION_ORDER` in `assets/js/main.js`
-3. Add its nav label to `nav` in both content files — done.
-
----
-
-Built by hand with vanilla JS · © 2026 Nariman Khaleghi — [thepm.ir](https://thepm.ir)
+- Respects `prefers-reduced-motion`; keyboard navigable; skip-link included.
+- Loader shows fully once per browser session, then a quick curtain.
+- FA mode: RTL layout, Persian digits, Jalali dates via `Intl`.

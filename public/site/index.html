@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-lang="en">
+<html lang="en" dir="ltr" data-lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Nariman Khaleghi — The PM · Senior Product Manager, FinTech &amp; Payments</title>
   <meta name="description" content="Official site of Nariman Khaleghi (The PM): Senior Product Manager in FinTech & Payments. 2M+ user super-app owner, 5 products launched 0→1, AI-native PM.">
-  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- theme bootstrap: runs BEFORE paint → zero flash -->
+  <script>
+    (function () {
+      var t = "dark";
+      try {
+        t = localStorage.getItem("nk-theme") ||
+          (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      } catch (e) {}
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+  <meta name="theme-color" content="#0b0b0b">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nariman Khaleghi — The PM">
   <meta property="og:description" content="Senior Product Manager · FinTech & Payments · 2M+ users · 5 products 0→1 · AI-native">
-  <meta property="og:url" content="https://thepm.ir">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://narimankhaleghi.github.io/cv/">
+  <meta property="og:image" content="https://narimankhaleghi.github.io/cv/assets/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
 
   <!-- favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -37,11 +50,13 @@
     "name": "Nariman Khaleghi",
     "alternateName": "The PM",
     "jobTitle": "Senior Product Manager — FinTech & Payments",
-    "url": "https://thepm.ir",
+    "url": "https://narimankhaleghi.github.io/cv/",
     "email": "mailto:pm@thepm.ir",
+    "image": "assets/img/profile.jpg",
     "sameAs": [
       "https://github.com/NarimanKhaleghi",
-      "https://linkedin.com/in/NarimanKhaleghi"
+      "https://linkedin.com/in/NarimanKhaleghi",
+      "https://cv.thepm.ir"
     ],
     "address": { "@type": "PostalAddress", "addressLocality": "Tehran", "addressCountry": "IR" }
   }
@@ -55,13 +70,11 @@
 
   <!-- custom cursor -->
   <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span class="cursor-label"></span></div>
 
-  <!-- film grain -->
+  <!-- film grain + theme wipe fallback -->
   <div class="grain" aria-hidden="true"></div>
-
-  <!-- cinematic loader -->
-  <div class="loader" id="loader" aria-hidden="true"></div>
+  <div class="wipe" aria-hidden="true"></div>
 
   <!-- navigation (rendered by JS) -->
   <header class="nav" id="nav"></header>
@@ -69,7 +82,7 @@
   <!-- mobile menu overlay -->
   <div class="mmenu" id="mmenu" aria-hidden="true"></div>
 
-  <!-- page -->
+  <!-- the journey -->
   <main id="app" tabindex="-1"></main>
 
   <!-- project docs modal -->
@@ -83,23 +96,23 @@
   <!-- core -->
   <script src="assets/js/core/util.js"></script>
   <script src="assets/js/core/i18n.js"></script>
+  <script src="assets/js/core/theme.js"></script>
   <script src="assets/js/core/effects.js"></script>
   <script src="assets/js/core/cursor.js"></script>
   <script src="assets/js/core/md.js"></script>
 
-  <!-- section modules (modular: add/remove freely) -->
+  <!-- chapter modules (modular: add/remove freely) -->
   <script src="assets/js/sections/loader.js"></script>
   <script src="assets/js/sections/nav.js"></script>
-  <script src="assets/js/sections/hero.js"></script>
+  <script src="assets/js/sections/cover.js"></script>
   <script src="assets/js/sections/marquee.js"></script>
   <script src="assets/js/sections/about.js"></script>
-  <script src="assets/js/sections/stats.js"></script>
-  <script src="assets/js/sections/experience.js"></script>
-  <script src="assets/js/sections/skills.js"></script>
-  <script src="assets/js/sections/projects.js"></script>
-  <script src="assets/js/sections/education.js"></script>
+  <script src="assets/js/sections/numbers.js"></script>
+  <script src="assets/js/sections/journey.js"></script>
+  <script src="assets/js/sections/toolbox.js"></script>
+  <script src="assets/js/sections/lab.js"></script>
+  <script src="assets/js/sections/edu.js"></script>
   <script src="assets/js/sections/contact.js"></script>
-  <script src="assets/js/sections/footer.js"></script>
 
   <!-- bootstrap -->
   <script src="assets/js/main.js"></script>

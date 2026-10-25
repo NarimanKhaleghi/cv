@@ -1,54 +1,87 @@
 /* ============================================================
-   NK — THE PM · Section: cinematic loader
+   NK — THE PM · Section: loader (boarding-pass intro)
+   Full cinematic version on first visit of a session;
+   fast curtain afterwards. Click anywhere to skip.
    ============================================================ */
 (function () {
   "use strict";
   var NK = (window.NK = window.NK || {});
 
-  NK.sections = NK.sections || {};
+  NK.buildLoader = function (c, full) {
+    var U = NK.util;
+    var L = c.loader;
+    var root = U.el("div", { class: "loader", id: "loader" });
 
-  /* build loader DOM (called once at boot) */
-  NK.buildLoader = function (c) {
-    var root = document.getElementById("loader");
-    if (!root) return null;
-    root.innerHTML = "";
-    var inner = NK.util.el("div", { class: "loader-inner" });
-    var brand = NK.util.el("div", { class: "loader-brand" });
-    c.loader.brand.forEach(function (w) {
-      brand.appendChild(NK.util.el("span", { class: "w" }, [
-        NK.util.el("span", { text: w })
-      ]));
-    });
-    inner.appendChild(brand);
-    inner.appendChild(NK.util.el("div", { class: "loader-name", text: c.loader.name }));
-    var bar = NK.util.el("div", { class: "loader-bar" }, [NK.util.el("div", { class: "fill" })]);
-    inner.appendChild(bar);
-    var pct = NK.util.el("div", { class: "loader-pct", text: "0%" });
-    inner.appendChild(pct);
-    root.appendChild(inner);
-    return { root: root, fill: bar.querySelector(".fill"), pct: pct };
+    var pass = U.el("div", { class: "loader__pass" }, [
+      U.el("div", { class: "loader__top" }, [
+        U.el("span", { text: L.passTitle }),
+        U.el("span", { text: L.doc })
+      ]),
+      U.el("div", { class: "loader__route" }, [
+        U.el("div", {}, [
+          U.el("div", { class: "loader__iata", text: L.from }),
+          U.el("div", { class: "loader__city", text: L.fromName })
+        ]),
+        U.el("div", { class: "loader__plane", text: "✈", "aria-hidden": "true" }),
+        U.el("div", { style: { textAlign: "end" } }, [
+          U.el("div", { class: "loader__iata", text: L.to }),
+          U.el("div", { class: "loader__city", text: L.toName })
+        ])
+      ]),
+      U.el("div", { class: "loader__meta" }, [
+        U.el("span", { text: L.flight }),
+        U.el("span", { text: L.gate }),
+        U.el("span", { text: L.seat })
+      ]),
+      U.el("div", { class: "loader__stub" }, [
+        U.el("span", { text: L.name }),
+        U.el("span", { text: "NK ✦ 2016" })
+      ]),
+      U.el("div", { class: "loader__stamp", text: L.stamp })
+    ]);
+
+    var bar = U.el("div", { class: "loader__bar" }, [U.el("i")]);
+    root.appendChild(pass);
+    if (full) root.appendChild(bar);
+    root.appendChild(U.el("div", { class: "loader__skip", text: c.ui.skip }));
+    return root;
   };
 
-  /* run the loader sequence, then call done() */
-  NK.runLoader = function (ui, done) {
-    var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!ui || reduced) { if (ui) ui.root.style.display = "none"; done(); return; }
+  NK.runLoader = function (root, full, done) {
+    var finish = function () {
+      if (root.__done) return;
+      root.__done = true;
+      root.classList.add("is-done");
+      document.body.classList.remove("loader-lock");
+      setTimeout(function () { root.remove(); }, 700);
+      if (typeof done === "function") setTimeout(done, 120);
+    };
 
+    root.addEventListener("click", finish);
+    document.body.appendChild(root);
+
+    if (!full) { setTimeout(finish, 350); return; }
+
+    /* full boarding-pass sequence */
+    var bar = root.querySelector(".loader__bar i");
+    var stamp = root.querySelector(".loader__stamp");
     var p = 0;
-    var iv = setInterval(function () {
-      p += Math.random() * 16 + 6;
-      if (p >= 100) { p = 100; clearInterval(iv); finish(); }
-      ui.fill.style.width = p + "%";
-      ui.pct.textContent = Math.floor(p) + "% — " + (NK.i18n.lang === "fa" ? NK.util.faNum(Math.floor(p)) + "٪" : Math.floor(p) + "%");
-    }, 110);
-
-    function finish() {
-      setTimeout(function () {
-        ui.root.classList.add("is-done");
-        document.body.classList.add("loaded");
-        done();
-        setTimeout(function () { ui.root.remove(); }, 1000);
-      }, 260);
-    }
+    var tick = setInterval(function () {
+      p = Math.min(100, p + 7 + Math.random() * 16);
+      if (bar) bar.style.width = p + "%";
+      if (p >= 100) {
+        clearInterval(tick);
+        if (stamp) {
+          stamp.classList.add("is-on");
+          setTimeout(function () {
+            if (NK.fx.confetti && !NK.util.REDUCED) {
+              var r = stamp.getBoundingClientRect();
+              NK.fx.confetti(r.left + r.width / 2, r.top + r.height / 2);
+            }
+          }, 240);
+        }
+        setTimeout(finish, 620);
+      }
+    }, 130);
   };
 })();

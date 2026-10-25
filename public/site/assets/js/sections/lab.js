@@ -1,5 +1,5 @@
 /* ============================================================
-   NK — THE PM · Section: projects (auto-synced from GitHub)
+   NK — THE PM · Section: lab (chapter 05 — GitHub auto-sync)
    Reads data/projects.json (written weekly by GitHub Action).
    README is fetched live from raw.githubusercontent.com on demand.
    ============================================================ */
@@ -8,7 +8,7 @@
   var NK = (window.NK = window.NK || {});
   var U = NK.util;
 
-  var state = { all: [], filter: "All", lang: "en" };
+  var state = { all: [], filter: "All" };
 
   function dataUrl() {
     /* relative → works on github.io subpaths, custom domains & /site/ preview */
@@ -17,7 +17,7 @@
 
   function descOf(r, c) {
     if (r.description && r.description.trim()) return r.description.trim();
-    return c.projects.repo + " · " + r.name;
+    return c.lab.repo + " · " + r.name;
   }
 
   function card(r, c) {
@@ -30,13 +30,16 @@
       "data-repo": r.name
     });
 
-    var nameRow = U.el("h3", { class: "proj-name", text: r.name });
+    if (r.featured) d.appendChild(U.el("span", { class: "proj-feat", text: c.lab.featured }));
+
+    var nameRow = U.el("h3", { class: "proj-name" }, [
+      U.el("span", { text: r.name }),
+      U.el("span", { class: "go", text: "↗", "aria-hidden": "true" })
+    ]);
     d.appendChild(nameRow);
 
-    var descEl = U.el("p", { class: "proj-desc" + (U.isRtlText(desc) ? " rtl" : ""), text: desc });
-    d.appendChild(descEl);
+    d.appendChild(U.el("p", { class: "proj-desc" + (U.isRtlText(desc) ? " rtl" : ""), text: desc }));
 
-    /* tags: language + topics */
     var tags = U.el("div", { class: "proj-tags" });
     if (r.language) tags.appendChild(U.el("span", { class: "tag", text: r.language }));
     (r.topics || []).slice(0, 4).forEach(function (t) {
@@ -44,24 +47,13 @@
     });
     if (tags.children.length) d.appendChild(tags);
 
-    /* footer meta */
     var foot = U.el("div", { class: "proj-foot" });
-    var left = U.el("span", { class: "star-w", text: "★ " + U.num(r.stars || 0, lang) });
-    foot.appendChild(left);
+    foot.appendChild(U.el("span", { class: "star-w", text: "★ " + U.num(r.stars || 0, lang) }));
     foot.appendChild(U.el("span", { text: "·" }));
-    foot.appendChild(U.el("span", { class: "lang-dot", text: r.language || "—" }));
-    var upLbl = c.projects.updated + " " + U.fmtDate(r.pushed_at, lang);
-    foot.appendChild(U.el("span", { text: upLbl }));
-
-    var open = U.el("a", {
-      class: "open", href: "#",
-      text: c.projects.open + " ↗",
-      onclick: function (e) { e.preventDefault(); NK.openProject(r); }
-    });
-    foot.appendChild(open);
+    foot.appendChild(U.el("span", { text: c.lab.updated + " " + U.fmtDate(r.pushed_at, lang) }));
+    foot.appendChild(U.el("span", { class: "open", text: c.lab.open + " ↗" }));
     d.appendChild(foot);
 
-    /* whole card clickable */
     d.addEventListener("click", function (e) {
       if (e.target.closest("a")) return;
       NK.openProject(r);
@@ -69,7 +61,7 @@
     return d;
   }
 
-  function skeletonCards(n, c) {
+  function skeletonCards(n) {
     var frag = document.createDocumentFragment();
     for (var i = 0; i < n; i++) {
       var sk = U.el("div", { class: "proj-skel" });
@@ -79,29 +71,25 @@
     return frag;
   }
 
-  NK.sections.projects = {
+  NK.sections.lab = {
     render: function (c) {
-      var p = c.projects;
-      state.lang = NK.i18n.lang;
+      var p = c.lab;
       state.filter = "All";
       state.all = [];
 
-      var sec = U.el("section", { class: "sec", id: "projects" });
+      var sec = U.el("section", { class: "chapter chapter--tight lab", id: "lab" });
       var cont = U.el("div", { class: "container" });
-      var head = U.el("div", { class: "sec-head" }, [
-        U.el("div", { class: "idx", text: p.idx + " / " + p.label }),
-        U.el("h2", { text: p.title }),
-        U.el("p", { class: "sub", html: p.sub })
-      ]);
+      var head = NK.chHead(c, p);
+      if (p.sub) head.appendChild(U.el("p", { class: "ch-sub", html: p.sub, "data-reveal": "up", style: { "--rd": ".2s" } }));
       cont.appendChild(head);
 
-      var toolbar = U.el("div", { class: "proj-toolbar" });
-      var counter = U.el("span", { class: "count" });
+      var toolbar = U.el("div", { class: "lab-toolbar" });
+      var counter = U.el("span", { class: "lab-count" });
       toolbar.appendChild(counter);
       cont.appendChild(toolbar);
 
-      var grid = U.el("div", { class: "proj-grid" });
-      grid.appendChild(skeletonCards(6, c));
+      var grid = U.el("div", { class: "lab-grid" });
+      grid.appendChild(skeletonCards(6));
       cont.appendChild(grid);
 
       var sync = U.el("div", { class: "proj-sync", style: { opacity: "0" } }, [
@@ -111,7 +99,6 @@
       cont.appendChild(sync);
       sec.appendChild(cont);
 
-      /* load data */
       fetch(dataUrl(), { cache: "no-cache" })
         .then(function (r) { if (!r.ok) throw new Error("http " + r.status); return r.json(); })
         .then(function (json) {
@@ -124,12 +111,8 @@
             sync.querySelector(".sync-txt").textContent =
               p.syncAt + ": " + U.fmtDate(json.generatedAt, NK.i18n.lang) + " · " + p.syncOn;
             sync.style.opacity = "1";
-            /* refresh footer sync stamp too */
             var fmeta = document.querySelector(".footer .sync-meta");
-            if (fmeta && NK.sections.footer) {
-              var fresh = NK.sections.footer.render(NK.i18n.content());
-              fmeta.parentNode.replaceChild(fresh.querySelector(".sync-meta"), fmeta);
-            }
+            if (fmeta) fmeta.textContent = p.syncAt + ": " + U.fmtDate(json.generatedAt, NK.i18n.lang);
           }
           NK.fx.initReveals(grid);
           NK.fx.initTilt(grid);
@@ -146,7 +129,6 @@
   };
 
   function buildFilters(toolbar, counter, grid, c) {
-    /* remove old filters, keep counter */
     toolbar.querySelectorAll(".fchip").forEach(function (b) { b.remove(); });
     var langs = {};
     state.all.forEach(function (r) {
@@ -155,18 +137,18 @@
     });
     var keys = Object.keys(langs).sort(function (a, b) { return langs[b] - langs[a]; });
     var mkBtn = function (label, val) {
-      var b = U.el("button", {
+      return U.el("button", {
         type: "button", class: "fchip" + (state.filter === val ? " is-on" : ""), text: label,
         onclick: function () {
           state.filter = val;
           toolbar.querySelectorAll(".fchip").forEach(function (x) { x.classList.remove("is-on"); });
-          b.classList.add("is-on");
+          NK.util && null;
+          this.classList.add("is-on");
           applyFilter(grid, counter, c);
         }
       });
-      return b;
     };
-    toolbar.insertBefore(mkBtn(c.projects.filterAll, "All"), counter);
+    toolbar.insertBefore(mkBtn(c.lab.filterAll, "All"), counter);
     keys.forEach(function (k) { toolbar.insertBefore(mkBtn(k, k), counter); });
   }
 
@@ -178,7 +160,7 @@
     counter.textContent = U.num(list.length, NK.i18n.lang) + " / " + U.num(state.all.length, NK.i18n.lang);
     grid.innerHTML = "";
     if (!list.length) {
-      grid.appendChild(U.el("div", { class: "proj-empty" }, [U.el("p", { text: c.projects.empty })]));
+      grid.appendChild(U.el("div", { class: "proj-empty" }, [U.el("p", { text: c.lab.empty })]));
       return;
     }
     var frag = document.createDocumentFragment();
@@ -189,7 +171,7 @@
   /* ---------------- modal with live README ---------------- */
   NK.openProject = function (r) {
     var c = NK.i18n.content();
-    var p = c.projects;
+    var p = c.lab;
     var root = document.getElementById("modal");
     root.innerHTML = "";
     root.classList.add("is-open");
@@ -216,7 +198,7 @@
     panel.appendChild(body);
 
     var gh = "https://github.com/" + (r.full_name || (NK.i18n.config().githubUser + "/" + r.name));
-    panel.appendChild(U.el("div", { style: { padding: "16px 24px", borderTop: "var(--bd-w) solid var(--white)", display: "flex", gap: "12px", flexWrap: "wrap" } }, [
+    panel.appendChild(U.el("div", { class: "modal-meta", style: { borderTop: "2px solid var(--bd-c-soft)", marginTop: "10px", paddingBottom: "16px" } }, [
       U.el("a", { class: "btn btn--sm", href: gh, target: "_blank", rel: "noopener" }, [
         U.el("span", { text: p.github }),
         U.el("span", { class: "ar", text: "↗" })
@@ -238,7 +220,6 @@
     document.addEventListener("keydown", escClose);
     function escClose(e) { if (e.key === "Escape") { close(); document.removeEventListener("keydown", escClose); } }
 
-    /* ---- fetch README live from raw.githubusercontent.com ---- */
     function skel() {
       mdBox.innerHTML = "";
       for (var i = 0; i < 7; i++) mdBox.appendChild(U.el("div", { class: "skel", style: { width: (95 - (i % 4) * 22) + "%" } }));
@@ -262,7 +243,6 @@
       tryBranch(branches[idx++])
         .then(function (txt) {
           mdBox.innerHTML = NK.md.render(txt);
-          /* make rendered html respect page direction */
           var rtl = U.isRtlText(txt.slice(0, 400));
           mdBox.setAttribute("dir", rtl ? "rtl" : "ltr");
           mdBox.classList.toggle("rtl", rtl);

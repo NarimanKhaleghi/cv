@@ -1,6 +1,6 @@
 /* ============================================================
-   NK — THE PM · Custom cursor (desktop only)
-   dot follows instantly · ring lerps · mix-blend difference
+   NK — THE PM · Custom cursor (desktop, pointer:fine)
+   dot + lagging ring; ring reacts to links & expandable cards
    ============================================================ */
 (function () {
   "use strict";
@@ -8,53 +8,41 @@
 
   NK.cursor = {
     init: function () {
-      var fine = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
-      var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!fine || reduced) return;
-
+      if (!NK.util.FINE || NK.util.REDUCED) {
+        document.documentElement.setAttribute("data-cursor", "off");
+        return;
+      }
       var dot = document.querySelector(".cursor-dot");
       var ring = document.querySelector(".cursor-ring");
       if (!dot || !ring) return;
 
-      document.documentElement.classList.add("has-cursor");
-
-      var x = -100, y = -100, rx = -100, ry = -100;
-      var seen = false;
+      var x = -100, y = -100, rx = -100, ry = -100, seen = false;
 
       document.addEventListener("pointermove", function (e) {
         x = e.clientX; y = e.clientY;
-        if (!seen) { rx = x; ry = y; seen = true; }
-        dot.style.left = x + "px";
-        dot.style.top = y + "px";
+        if (!seen) { seen = true; rx = x; ry = y; }
+        var t = e.target;
+        var link = t.closest && t.closest("a, button, [data-cursor-link]");
+        var read = t.closest && t.closest(".acc__head, .proj-card");
+        ring.classList.toggle("is-link", !!link && !read);
+        ring.classList.toggle("is-read", !!read);
       }, { passive: true });
 
-      document.addEventListener("pointerdown", function () { ring.classList.add("is-press"); });
-      document.addEventListener("pointerup", function () { ring.classList.remove("is-press"); });
+      document.addEventListener("pointerleave", function () {
+        dot.style.opacity = "0"; ring.style.opacity = "0";
+      });
+      document.addEventListener("pointerenter", function () {
+        dot.style.opacity = "1"; ring.style.opacity = "1";
+      });
 
       (function loop() {
         rx += (x - rx) * 0.16;
         ry += (y - ry) * 0.16;
-        ring.style.left = rx + "px";
-        ring.style.top = ry + "px";
+        dot.style.transform = "translate(" + x + "px," + y + "px)";
+        ring.style.transform = "translate(" + rx.toFixed(1) + "px," + ry.toFixed(1) + "px)" +
+          (ring.classList.contains("is-read") ? " scale(2)" : "");
         requestAnimationFrame(loop);
       })();
-
-      // grow on interactive elements
-      var HOVER = "a, button, [data-cursor='hover'], .chip, .proj-card, .c-item";
-      document.addEventListener("pointerover", function (e) {
-        if (e.target.closest && e.target.closest(HOVER)) ring.classList.add("is-hover");
-      }, { passive: true });
-      document.addEventListener("pointerout", function (e) {
-        if (e.target.closest && e.target.closest(HOVER)) ring.classList.remove("is-hover");
-      }, { passive: true });
-
-      // hide when leaving the window
-      document.addEventListener("mouseleave", function () {
-        dot.style.opacity = 0; ring.style.opacity = 0;
-      });
-      document.addEventListener("mouseenter", function () {
-        dot.style.opacity = ""; ring.style.opacity = "";
-      });
     }
   };
 })();

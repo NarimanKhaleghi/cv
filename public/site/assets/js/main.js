@@ -1,28 +1,27 @@
 /* ============================================================
-   NK — THE PM · main bootstrap
+   NK — THE PM · main bootstrap v2 — THE JOURNEY
    ─────────────────────────────────────────────────────────
-   MODULAR SECTION REGISTRY
-   To add a section:  1) create assets/js/sections/<id>.js with
-                         NK.sections.<id> = { render(c), after() }
-                      2) add a <script> tag in index.html
-                      3) add its id + nav label to data/content.*.js
-   To remove one: comment out its line below (+ nav entry).
+   MODULAR CHAPTER REGISTRY
+   To add a chapter: 1) create assets/js/sections/<id>.js with
+                        NK.sections.<id> = { render(c) }
+                     2) add a <script> tag in index.html
+                     3) add { id, no, label } to data/content.*.js
+   To remove one: comment out its line below (+ content entry).
    ============================================================ */
 (function () {
   "use strict";
   var NK = (window.NK = window.NK || {});
 
-  /* order matters — this IS the page */
-  var SECTION_ORDER = [
-    "hero",       // dark   — cinematic intro + NK monogram
-    "marquee",    // paper  — skills ticker (uses c.marquee)
-    "about",      // dark   — story, facts, quote
-    "stats",      // paper  — animated counters
-    "experience", // dark   — timeline
-    "skills",     // paper  — toolbox table
-    "projects",   // dark   — GitHub auto-sync
-    "education",  // paper  — degrees
-    "contact"     // dark   — mega CTA
+  /* order matters — this IS the journey */
+  var CHAPTERS = [
+    "cover",    // 00 — boarding pass intro (photo, name, minimal CTAs)
+    "about",    // 01 — who (progressive disclosure: teaser → full story)
+    "numbers",  // 02 — proof in counters
+    "journey",  // 03 — career route map, click-to-open stations
+    "toolbox",  // 04 — skill drawers
+    "lab",      // 05 — GitHub auto-synced projects
+    "edu",      // 06 — education + side quests
+    "contact"   // 07 — destination (channels + résumé CTA)
   ];
 
   var app;
@@ -31,52 +30,43 @@
     var c = NK.i18n.content();
     app.innerHTML = "";
 
-    SECTION_ORDER.forEach(function (id) {
+    CHAPTERS.forEach(function (id) {
       var mod = NK.sections[id];
       if (!mod || typeof mod.render !== "function") return;
-      var el = null;
       try {
-        if (id === "marquee") {
-          el = mod.render(c, { items: c.marquee });
-          el.id = "marquee-1";
-        } else {
-          el = mod.render(c);
-        }
+        app.appendChild(mod.render(c));
       } catch (e) {
-        console.error("[nk] section failed:", id, e);
-        return;
-      }
-      app.appendChild(el);
-      /* hero letters are triggered AFTER the loader finishes (see boot) */
-      if (id !== "hero" && typeof mod.after === "function") {
-        try { mod.after(el); } catch (e) { console.error("[nk] after failed:", id, e); }
+        console.error("[nk] chapter failed:", id, e);
       }
     });
 
-    /* second marquee before footer */
-    if (NK.sections.marquee) {
-      app.appendChild(NK.sections.marquee.render(c, { items: c.marquee2, dark: true }));
-    }
-    if (NK.sections.footer) app.appendChild(NK.sections.footer.render(c));
-
-    /* re-init per-render systems */
     NK.fx.initReveals(app);
     NK.fx.initCounters(app);
     NK.fx.initTilt(app);
-    NK.fx.initActiveNav();
+    NK.fx.initMagnets(app);
+    NK.fx.initParallax(app);
+    NK.fx.initJourney();
+    NK.fx.initChapters();
+    NK.fx.initProgress();
+    NK.fx.initNavSolid();
   }
 
   function rerender() {
-    app.style.transition = "opacity .25s ease";
+    app.style.transition = "opacity .22s ease";
     app.style.opacity = "0";
     setTimeout(function () {
       renderAll();
-      NK.sections.nav.render(NK.i18n.content());
-      requestAnimationFrame(function () { app.style.opacity = "1"; });
-      /* retrigger hero letters */
-      var hero = document.querySelector(".hero");
-      if (hero && NK.sections.hero.after) NK.sections.hero.after(hero);
-    }, 260);
+      NK.sections.nav.render();
+      requestAnimationFrame(function () {
+        app.style.opacity = "1";
+        /* replay cover name animation */
+        var name = document.querySelector(".cover-name");
+        if (name) {
+          name.classList.remove("is-in");
+          setTimeout(function () { name.classList.add("is-in"); }, 60);
+        }
+      });
+    }, 240);
   }
 
   NK.switchLang = function (lang) {
@@ -86,22 +76,26 @@
 
   function boot() {
     app = document.getElementById("app");
+    NK.theme.init();
     NK.i18n.applyDoc();
 
-    /* nav first so it's visible during load */
-    NK.sections.nav.render(NK.i18n.content());
+    NK.sections.nav.render();
     renderAll();
 
-    /* fixed layers */
-    NK.fx.initProgress();
     NK.cursor.init();
 
-    var loaderUi = NK.buildLoader(NK.i18n.content());
-    NK.runLoader(loaderUi, function () {
-      var hero = document.querySelector(".hero");
-      if (hero) NK.sections.hero.after(hero);
+    /* loader: full boarding-pass on first visit of the session,
+       quick curtain afterwards */
+    var seen = false;
+    try { seen = !!sessionStorage.getItem("nk-loaded"); } catch (e) {}
+    var loaderUi = NK.buildLoader(NK.i18n.content(), !seen);
+    NK.runLoader(loaderUi, !seen, function () {
+      try { sessionStorage.setItem("nk-loaded", "1"); } catch (e) {}
+      var name = document.querySelector(".cover-name");
+      if (name) name.classList.add("is-in");
       NK.fx.initReveals(document);
     });
+    if (!seen) document.body.classList.add("loader-lock");
   }
 
   if (document.readyState === "loading") {

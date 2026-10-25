@@ -1,30 +1,40 @@
 /* ============================================================
-   NK — THE PM · Section: marquee band
+   NK — THE PM · Section: marquee (ticker strips)
+   Reusable: NK.sections.marquee.render(c, { items, flat, bottom })
    ============================================================ */
 (function () {
   "use strict";
   var NK = (window.NK = window.NK || {});
-  var U = NK.util;
 
   NK.sections.marquee = {
     render: function (c, opts) {
       opts = opts || {};
-      var items = opts.items || c.marquee;
-      var dark = !!opts.dark;
+      var items = (opts.items && opts.items.length ? opts.items : c.marquee) || [];
+      /* duplicate the sequence enough times for a seamless loop */
+      var seq = [];
+      for (var r = 0; r < 4; r++) items.forEach(function (t) { seq.push(t); });
 
-      var band = U.el("div", { class: "marquee" + (dark ? " marquee--dark" : ""), "aria-hidden": "true" });
-      var track = U.el("div", { class: "marquee-track" });
-      /* two identical groups → seamless -50% loop */
-      for (var g = 0; g < 2; g++) {
-        items.forEach(function (t) {
-          track.appendChild(U.el("span", {}, [
-            U.el("span", { text: t }),
-            U.el("span", { class: "star", text: "✦" })
-          ]));
+      var chunk = function () {
+        var d = document.createDocumentFragment();
+        var el = document.createElement("div");
+        el.className = "marquee-chunk";
+        seq.forEach(function (t) {
+          el.appendChild(NK.util.el("span", { class: "marquee-item", text: t }));
         });
-      }
-      band.appendChild(track);
-      return band;
+        d.appendChild(el);
+        return d;
+      };
+
+      var root = NK.util.el("div", {
+        class: "marquee" + (opts.flat ? " marquee--flat" : ""),
+        "aria-hidden": "true"
+      });
+      var track = NK.util.el("div", { class: "marquee-track" });
+      track.appendChild(chunk());
+      track.appendChild(chunk());
+      root.appendChild(track);
+      if (opts.bottom) root.style.marginTop = "auto";
+      return root;
     }
   };
 })();

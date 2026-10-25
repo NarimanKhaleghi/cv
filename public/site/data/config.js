@@ -1,10 +1,10 @@
 /* ============================================================
-   NK — THE PM · Site Configuration
+   NK — THE PM · Site Configuration (v2 — Journey edition)
    ─────────────────────────────────────────────────────────
-   This is the ONLY file you need to touch for wiring:
-   GitHub account, featured/excluded repos, contact channels.
-   It is used by BOTH the website and the weekly updater
-   (scripts/fetch-projects.mjs parses the object below).
+   The ONLY file you need to touch for wiring:
+   GitHub account, featured/excluded repos, résumé link,
+   contact channels. Used by BOTH the website and the weekly
+   updater (scripts/fetch-projects.mjs parses the object below).
    ============================================================ */
 
 window.NK_CONFIG = {
@@ -12,13 +12,19 @@ window.NK_CONFIG = {
   githubUser: "NarimanKhaleghi",
 
   /* Canonical site URL (used in meta/SEO) */
-  siteUrl: "https://thepm.ir",
+  siteUrl: "https://narimankhaleghi.github.io/cv/",
 
-  /* Repos pinned to the top of the Projects section */
+  /* Online résumé (open in a new tab — printable / PDF-export ready) */
+  resumeUrl: "https://cv.thepm.ir",
+
+  /* Repos pinned to the top of the Lab (projects) */
   featuredRepos: ["myip", "wallgold-management", "Markdown_Converter", "TaskFlow", "2048", "blog"],
 
-  /* Repos that must NEVER be shown (e.g. the website repo itself) */
-  excludeRepos: ["conf", "CF_WORKER", "nariman-portfolio", "thepm-website", "portfolio", "narimankhaleghi.github.io"],
+  /* Repos that must NEVER be shown.
+     "cv"      → this portfolio repo itself
+     "resume"  → the printable résumé site (already linked as its own CTA) */
+  excludeRepos: ["conf", "CF_WORKER", "nariman-portfolio", "thepm-website", "portfolio",
+                 "narimankhaleghi.github.io", "cv", "resume"],
 
   /* If non-empty, ONLY these repos are shown */
   includeOnlyRepos: [],
@@ -36,6 +42,6 @@ window.NK_CONFIG = {
     { id: "phone",    label: "Phone",    value: "+98 935 582 4252",             href: "tel:+989355824252" },
     { id: "linkedin", label: "LinkedIn", value: "in/NarimanKhaleghi",           href: "https://linkedin.com/in/NarimanKhaleghi" },
     { id: "github",   label: "GitHub",   value: "github.com/NarimanKhaleghi",   href: "https://github.com/NarimanKhaleghi" },
-    { id: "website",  label: "Website",  value: "thepm.ir",                     href: "https://thepm.ir" }
+    { id: "resume",   label: "Résumé",   value: "cv.thepm.ir",                  href: "https://cv.thepm.ir" }
   ]
 };

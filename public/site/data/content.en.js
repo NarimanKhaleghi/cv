@@ -1,5 +1,5 @@
 /* ============================================================
-   NK — THE PM · English content
+   NK — THE PM · English content (v2 — Journey edition)
    Edit freely — every visible string of the site lives here.
    Persian twin: content.fa.js (keep the same keys/shape).
    ============================================================ */
@@ -12,70 +12,93 @@ window.NK_CONTENT.en = {
     description: "Official site of Nariman Khaleghi (The PM): Senior Product Manager in FinTech & Payments. 2M+ user super-app owner, 5 products launched 0→1, AI-native PM. Resume, journey and auto-synced GitHub projects.",
     htmlLang: "en",
     dir: "ltr",
-    switchLabel: "فارسی"
+    switchLabel: "فا"
   },
 
-  nav: [
-    { id: "about",      label: "About" },
-    { id: "experience", label: "Experience" },
-    { id: "skills",     label: "Skills" },
-    { id: "projects",   label: "Projects" },
-    { id: "education",  label: "Education" },
-    { id: "contact",    label: "Contact" }
+  /* chapter registry — order = the journey (must match main.js) */
+  chapters: [
+    { id: "cover",   no: "00", label: "Boarding" },
+    { id: "about",   no: "01", label: "Who" },
+    { id: "numbers", no: "02", label: "Numbers" },
+    { id: "journey", no: "03", label: "Stations" },
+    { id: "toolbox", no: "04", label: "Toolbox" },
+    { id: "lab",     no: "05", label: "Lab" },
+    { id: "edu",     no: "06", label: "Foundations" },
+    { id: "contact", no: "07", label: "Destination" }
   ],
-  navMenu: { title: "MENU", foot: "THEPM.IR — EST. 2016" },
+
+  ui: {
+    menu: "Menu",
+    close: "Close",
+    themeLabel: "Toggle light / dark",
+    resume: "Résumé",
+    readMore: "Click to read",
+    readLess: "Collapse",
+    expandHint: "+",
+    backTop: "Back to boarding gate",
+    madeWith: "Hand-built with vanilla JS · zero frameworks",
+    skip: "Skip intro"
+  },
 
   loader: {
-    brand: ["THE", "PM"],
-    name: "NARIMAN KHALEGHI — LOADING THE JOURNEY"
+    doc: "BOARDING PASS",
+    passTitle: "THE PM AIRLINES",
+    from: "TEH",
+    fromName: "TEHRAN",
+    to: "WLD",
+    toName: "THE WORLD",
+    flight: "FLIGHT NK-2016",
+    gate: "GATE PM·01",
+    seat: "SEAT 1A",
+    stamp: "BOARDED",
+    name: "PASSenger: NARIMAN KHALEGHI"
   },
 
-  hero: {
-    kicker: ["THEPM.IR", "SENIOR PRODUCT MANAGER", "FINTECH × AI"],
+  cover: {
+    kicker: "TEHRAN, IRAN — 35.6892°N, 51.3890°E",
     nameLines: [
       { text: "NARIMAN",  style: "solid" },
       { text: "KHALEGHI", style: "outline" }
     ],
     role: "Senior Product Manager",
     roleSep: "FinTech & Payments",
-    pitch: "I own products end to end — from messy, regulated problems to measurable business results. Currently running <b>PutLife</b>, a fintech super-app with <b>2M+ registered users</b> at Iran Kish (Tejarat Bank subsidiary).",
-    ctaProjects: "See the work",
-    ctaContact: "Get in touch",
-    monogram: { top1: "THE PM", top2: "EST. 2016", bot1: "PRODUCT", bot2: "TEHRAN → WORLD" },
-    stickers: [
-      { text: "2M+ USERS",        cls: "stk-1", rot: "-6deg", fd: "0s" },
-      { text: "5 PRODUCTS 0→1",   cls: "stk-2", rot: "4deg",  fd: ".8s" },
-      { text: "AI-NATIVE PM",     cls: "stk-3", rot: "-3deg", fd: "1.6s" }
-    ],
+    pitch: "I take products from messy, regulated problems to measurable business results. Currently owning <b>PutLife</b> — a fintech super-app with <b>2M+ registered users</b>.",
+    ctaStart: "Start the journey",
+    ctaResume: "Résumé ↗",
+    ctaResumeHint: "cv.thepm.ir — opens in a new tab",
+    photoAlt: "Black & white portrait of Nariman Khaleghi",
+    ring: "THE PM · FINTECH · PAYMENTS · AI-NATIVE · PRODUCT · ",
+    stickerA: "2M+ USERS",
+    stickerB: "5 PRODUCTS 0→1",
     scroll: "SCROLL",
-    location: "TEHRAN, IRAN — 35.6892°N, 51.3890°E"
+    ticker: [
+      "NOW BOARDING · FLIGHT NK-2026",
+      "TEHRAN ⇄ THE WORLD",
+      "FINTECH & PAYMENTS",
+      "AI-NATIVE PRODUCT",
+      "2M+ USERS",
+      "5 PRODUCTS 0→1"
+    ]
   },
 
-  marquee: [
-    "Product Strategy", "Discovery", "Agile / Scrum", "FinTech & Payments", "RAG & AI Agents",
-    "OKR", "CRO", "Python", "Power BI", "BPMN 2.0", "UX/UI", "GTM"
-  ],
-  marquee2: [
-    "Let's build", "Let's ship", "Let's measure", "No fluff", "Data over opinions", "Users first"
-  ],
-
   about: {
-    idx: "01",
+    no: "01",
     label: "Who is The PM",
     title: "A hybrid of business, engineering & obsession",
+    teaser: "I'm Nariman Khaleghi — a Senior Product Manager with <b>4+ years in product management</b> and <b>8+ years in digital business</b>, currently responsible for <b>PutLife</b>, the fintech super-app of Iran Kish (a Tejarat Bank subsidiary) with <b>2M registered users</b>.",
+    moreTitle: "The full story",
     paragraphs: [
-      "I'm Nariman Khaleghi — a Senior Product Manager with <b>4+ years in product management</b> and <b>8+ years in digital business</b>. Today I'm responsible for <b>PutLife</b>, the fintech super-app of Iran Kish Credit Card Co. (a Tejarat Bank subsidiary) with <b>2M registered users</b>, leading strategy, discovery and Agile delivery across Android, iOS and PWA squads.",
       "I've launched <b>five products from scratch</b> and built digital products for <b>startups and national-scale platforms</b> across fintech, tax technology, travel, media and e-commerce — and I was <b>promoted quickly at four companies</b>, because I treat products like living systems: discover, measure, cut, ship, repeat.",
       "My edge is a <b>hybrid business + engineering profile</b>: strategy and marketing on one side, data, coding and solution design on the other. I work hands-on with <b>AI</b> — local LLMs, RAG pipelines, AI agents, n8n automation and vibe-coded MVP prototypes — and I'm comfortable in <b>fast-moving, regulated environments</b>, with fintech and payments as my home turf."
     ],
     factsTitle: "QUICK FACTS",
     facts: [
-      { k: "CURRENTLY",     v: "Senior PM · PutLife Super-App @ Iran Kish (KICCC)" },
-      { k: "BASE",          v: "Tehran, Iran · On-site / Hybrid" },
-      { k: "EDUCATION",     v: "M.Sc. Industrial Management — Semnan University" },
-      { k: "LANGUAGES",     v: "Persian (native) · English (professional working)" },
-      { k: "FOCUS",         v: "FinTech & Payments · AI-native product work" },
-      { k: "OPEN TO",       v: "Any industry that takes product seriously" }
+      { k: "CURRENTLY", v: "Senior PM · PutLife Super-App @ Iran Kish (KICCC)" },
+      { k: "BASE",      v: "Tehran, Iran · On-site / Hybrid" },
+      { k: "EDUCATION", v: "M.Sc. Industrial Management — Semnan University" },
+      { k: "LANGUAGES", v: "Persian (native) · English (professional working)" },
+      { k: "FOCUS",     v: "FinTech & Payments · AI-native product work" },
+      { k: "OPEN TO",   v: "Any industry that takes product seriously" }
     ],
     quote: "Products don't win because of features. They win because someone obsessed over the user's problem — and measured everything.",
     quoteBy: "— MY PERSONAL RULE #1",
@@ -83,33 +106,34 @@ window.NK_CONTENT.en = {
     beyond: ["Photography instructor (45+ students)", "Financial markets trader (6 yrs)", "Motorsport media founder", "AI tinkerer"]
   },
 
-  stats: {
-    idx: "02",
+  numbers: {
+    no: "02",
     label: "Proof, not promises",
-    title: "By the numbers",
+    title: "In numbers",
     items: [
-      { value: 2,     suffix: "M+", label: "Registered users on the PutLife fintech super-app" },
-      { value: 5,     suffix: "×",  label: "Products launched from scratch to production" },
-      { value: 8,     suffix: "+",  label: "Years in digital business & product" },
-      { value: 4,     suffix: "×",  label: "Fast-tracked promotions across 4 companies" },
-      { value: 81,    suffix: "%",  label: "Invoice volume growth → ~50% national market share" },
-      { value: 318,   suffix: "%",  label: "Organic traffic growth in 4 months via SEO rebuild" }
+      { value: 2,   suffix: "M+", label: "Registered users on the PutLife super-app" },
+      { value: 5,   suffix: "×",  label: "Products launched from scratch to production" },
+      { value: 8,   suffix: "+",  label: "Years in digital business & product" },
+      { value: 4,   suffix: "×",  label: "Fast-tracked promotions, 4 companies" },
+      { value: 81,  suffix: "%",  label: "Invoice volume growth → ~50% national share" },
+      { value: 318, suffix: "%",  label: "Organic traffic growth in 4 months (SEO)" }
     ]
   },
 
-  experience: {
-    idx: "03",
+  journey: {
+    no: "03",
     label: "The journey",
-    title: "10 years, 8 chapters, one obsession",
-    sub: "Every stop below taught me a different layer of the product craft — from zero-budget growth battles to national-scale, regulated fintech platforms.",
+    title: "10 years, 8 stations, one obsession",
+    sub: "A live route map. Click any station to open its full story — every stop taught me a different layer of the product craft.",
+    expand: "Open station",
     promoBadge: "⇡ PROMOTED",
-    alsoNote: "Also on the record: <b>6 years as a self-employed financial markets trader & analyst</b> (2019–2024) and <b>photography instructor</b> at Saheb Kosar High School (45+ students, 92% end-of-term satisfaction). References available from direct managers at every company.",
+    sideTripTitle: "SIDE TRIPS",
+    alsoNote: "On the record: <b>6 years as a self-employed financial markets trader & analyst</b> (2019–2024) and <b>photography instructor</b> at Saheb Kosar High School (45+ students, 92% end-of-term satisfaction). References available from direct managers at every company.",
     jobs: [
       {
         role: "Senior Product Manager — PutLife Super-App",
         company: "Iran Kish Credit Card Co. (KICCC)",
         companyDesc: "Knowledge-based PSP, subsidiary of Tejarat Bank",
-        meta: "TEHRAN · FULL-TIME · FEB 2026 → PRESENT",
         period: "FEB 2026 → NOW",
         promo: false,
         intro: "Owning PutLife end to end — the company's flagship fintech super-app for payments, credit and value-added services — with <b>2M+ registered users</b> and <b>300K+ active users</b> across Android, iOS and PWA.",
@@ -127,7 +151,6 @@ window.NK_CONTENT.en = {
         role: "Senior Product Manager",
         company: "Tiss TSP (Dadeh Pardazi Motamed Tiss)",
         companyDesc: "Authorized tax-service provider transmitting e-invoices to Iran's national Moadian platform",
-        meta: "TEHRAN · FULL-TIME · DEC 2024 → FEB 2026",
         period: "DEC 2024 → FEB 2026",
         promo: true,
         intro: "Joined as Project Manager and was promoted to Senior Product Manager after four months. Acted as the bridge between the VP office and technical/operations teams — <b>5 direct reports</b>, oversight of <b>22</b> — running product processes in Jira with a growing focus on platform development and market expansion.",
@@ -143,7 +166,6 @@ window.NK_CONTENT.en = {
         role: "Product Manager",
         company: "Afaq Seir — SafarMall",
         companyDesc: "Travel & tourism company; multi-supplier travel-booking marketplace (PWA)",
-        meta: "TEHRAN · FULL-TIME · MAY → DEC 2024",
         period: "MAY → DEC 2024",
         promo: false,
         intro: "Led SafarMall end to end — from supplier integrations and booking infrastructure to new product lines — managing a 6-person development team.",
@@ -159,13 +181,12 @@ window.NK_CONTENT.en = {
         role: "Product Marketing Manager",
         company: "Almassazeh Gostar Semnan",
         companyDesc: "Knowledge-based manufacturer of dry-mix building materials (waterproof & fire-resistant gypsum)",
-        meta: "SEMNAN · FULL-TIME · FEB 2022 → MAY 2024",
         period: "FEB 2022 → MAY 2024",
         promo: false,
         intro: "Launched the company's first online sales channel from scratch, built the dealership & export networks, defined the <b>go-to-market strategy</b> and managed a 3-person sales + digital-marketing team.",
         bullets: [
           "Built the company's first <b>e-commerce</b> store on <b>WordPress/WooCommerce</b> with zero prior digital sales — scaled from zero to an average of <b>3 tons/day</b> online within <b>10 months</b>.",
-          "Expanded <b>B2B</b> sales across channels: onboarded <b>14 new dealerships</b>, activated Torob, Sheypoor and Divar (generating <b>45% of online leads</b> and cutting <b>CAC by 28%</b>), and closed the company's first export deals to Iraq, Russia, Afghanistan and Turkey (<b>15% of annual sales volume</b>).",
+          "Expanded <b>B2B</b> sales across channels: onboarded <b>14 new dealerships</b>, activated Torob, Sheypoor and Divar (generating <b>45% of online sales leads</b> and cutting <b>CAC by 28%</b>), and closed the company's first export deals to Iraq, Russia, Afghanistan and Turkey (<b>15% of annual sales volume</b>).",
           "Led <b>CRO and GTM strategy</b>: redesigned landing pages and the purchase funnel, lifting conversion from <b>1.4% to 3.2% (+129%)</b>; defined <b>positioning & value propositions</b> for new lines from competitive research, shortening the sales cycle by <b>30%</b>.",
           "Improved <b>technical SEO & web performance</b>: PageSpeed 68 → <b>100 (desktop)</b> and 54 → <b>98 (mobile)</b>, load time 6.2s → <b>1.9s</b>, bounce rate down <b>45%</b>, organic traffic up <b>120%</b> — with GA4 + <b>Looker Studio</b> dashboards. Earned top Google rankings for <b>5+ strategic keywords</b> and <b>tripled monthly organic impressions</b>."
         ]
@@ -174,7 +195,6 @@ window.NK_CONTENT.en = {
         role: "Content Strategist & Audience Development Lead",
         company: "Ring Sport",
         companyDesc: "Iran's specialized automotive tuning & motorsport media",
-        meta: "TEHRAN · PART-TIME · FEB 2021 → FEB 2022",
         period: "FEB 2021 → FEB 2022",
         promo: false,
         intro: "Led content strategy, on-site multimedia production and audience development for Iran's specialized automotive tuning & motorsport publication.",
@@ -187,7 +207,6 @@ window.NK_CONTENT.en = {
         role: "Product Owner",
         company: "Sebyan Company",
         companyDesc: "EdTech company; builder of the “Daneshjouyar” platform",
-        meta: "TEHRAN · FULL-TIME · MAY 2020 → MAY 2021",
         period: "MAY 2020 → MAY 2021",
         promo: false,
         intro: "Launched <b>Daneshjouyar</b> from scratch — a single-window PWA for students' non-academic university services, born during COVID-19. Led needs assessment, user research, market & competitor analysis (TAM/SAM/SOM), benchmarking and roadmap definition.",
@@ -202,7 +221,6 @@ window.NK_CONTENT.en = {
         role: "Senior Product Marketing Specialist",
         company: "Avangard Tech",
         companyDesc: "Raymon Amitis holding subsidiary; full-service digital agency & developer of the “Viva Vital” luxury FMCG brand",
-        meta: "TEHRAN · PART-TIME · JAN 2018 → DEC 2019",
         period: "JAN 2018 → DEC 2019",
         promo: true,
         intro: "Led brand building and digital-marketing delivery for the agency and its FMCG client — brand strategy, distribution design and B2B client acquisition.",
@@ -216,7 +234,6 @@ window.NK_CONTENT.en = {
         role: "Senior Digital Marketing Specialist",
         company: "Bakhtar Flower",
         companyDesc: "Online flower & plant retailer",
-        meta: "TEHRAN · FULL-TIME · JAN 2016 → JAN 2018",
         period: "JAN 2016 → JAN 2018",
         promo: true,
         intro: "Led digital strategy end to end — the digital team and the marketing budget — driving online sales and the e-commerce app.",
@@ -229,11 +246,11 @@ window.NK_CONTENT.en = {
     ]
   },
 
-  skills: {
-    idx: "04",
+  toolbox: {
+    no: "04",
     label: "The toolbox",
     title: "What I actually use",
-    sub: "Bold chips are the heavy hitters — the tools I reach for every single week.",
+    sub: "Eight drawers. Click a drawer to open it — bold chips are the heavy hitters I reach for every single week.",
     groups: [
       { name: "Product Management", items: [
         { t: "Product Strategy & Vision", key: true }, { t: "Product Discovery", key: true },
@@ -283,11 +300,11 @@ window.NK_CONTENT.en = {
     ]
   },
 
-  projects: {
-    idx: "05",
+  lab: {
+    no: "05",
     label: "Shipped & building",
-    title: "Live from GitHub",
-    sub: "Public repositories, auto-synced weekly from <a href=\"https://github.com/NarimanKhaleghi\" target=\"_blank\" rel=\"noopener\">github.com/NarimanKhaleghi</a> — README included.",
+    title: "The Lab — live from GitHub",
+    sub: "Public repositories, auto-synced weekly from <a href=\"https://github.com/NarimanKhaleghi\" target=\"_blank\" rel=\"noopener\">github.com/NarimanKhaleghi</a> — click a card to read its README.",
     syncOn: "AUTO-SYNCED",
     syncAt: "LAST SYNC",
     loading: "Fetching repositories…",
@@ -306,29 +323,39 @@ window.NK_CONTENT.en = {
     repo: "Repository"
   },
 
-  education: {
-    idx: "06",
+  edu: {
+    no: "06",
     label: "Foundations",
-    title: "Education",
+    title: "Education & side quests",
     items: [
       { degree: "M.Sc. — Industrial Management (Production & Operations)", school: "Semnan University, Faculty of Management", years: "2023 → 2026" },
       { degree: "B.Sc. — Industrial Management", school: "Semnan University, Faculty of Management", years: "2019 → 2023" }
+    ],
+    sideTitle: "SIDE QUESTS",
+    side: [
+      { k: "Trader & Market Analyst", v: "Self-employed · 6 years (2019–2024)" },
+      { k: "Photography Instructor",  v: "Saheb Kosar High School · 45+ students · 92% satisfaction" }
     ],
     note: "References available from former direct managers at every company upon request."
   },
 
   contact: {
-    idx: "07",
-    label: "Say hello",
-    title: "Let's build something worth measuring.",
+    no: "07",
+    label: "Destination",
+    title: "The journey continues.",
     sub: "Hiring, consulting, or just good product talk — my inbox is open. I reply fast.",
-    note: "Based in Tehran · Working with teams worldwide"
+    channelsTitle: "CHANNELS",
+    resumeTitle: "Need the paper trail?",
+    resumeSub: "The full, printable résumé lives on its own page — open it in a new tab, read it, and export it as PDF straight from the browser.",
+    resumeBtn: "Open résumé ↗",
+    resumeHint: "cv.thepm.ir · opens in a new tab",
+    note: "Based in Tehran · Working with teams worldwide",
+    toast: "Nice — you found the badge. Stay curious ✦"
   },
 
   footer: {
     brand: "NARIMAN KHALEGHI — THE PM",
-    built: "Hand-built with vanilla JS · zero frameworks",
-    rights: "© 2026 · thepm.ir",
+    rights: "© 2026 · Built by hand",
     sync: "DATA SYNC"
   }
 };

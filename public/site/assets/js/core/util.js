@@ -1,5 +1,5 @@
 /* ============================================================
-   NK — THE PM · DOM utilities
+   NK — THE PM · DOM utilities v2
    ============================================================ */
 (function () {
   "use strict";
@@ -61,6 +61,11 @@
       return /[\u0600-\u06FF]/.test(String(s || ""));
     },
 
+    /** arabic-script detection (whole-word animation, never split letters) */
+    isArabicScript: function (s) {
+      return /[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/.test(String(s || ""));
+    },
+
     clamp: function (v, min, max) { return Math.min(max, Math.max(min, v)); },
 
     /** rAF throttle */
@@ -71,6 +76,15 @@
         ticking = true;
         requestAnimationFrame(function () { ticking = false; fn(); });
       };
-    }
+    },
+
+    /** read/write localStorage safely */
+    store: {
+      get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+      set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    },
+
+    FINE: window.matchMedia && window.matchMedia("(pointer: fine)").matches,
+    REDUCED: window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches
   };
 })();

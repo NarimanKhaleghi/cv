@@ -107,23 +107,6 @@
       "featured": true
     },
     {
-      "name": "cv",
-      "full_name": "NarimanKhaleghi/cv",
-      "html_url": "https://github.com/NarimanKhaleghi/cv",
-      "description": "",
-      "language": "HTML",
-      "topics": [],
-      "stars": 1,
-      "forks": 0,
-      "homepage": "",
-      "created_at": "2025-11-11T08:11:38Z",
-      "updated_at": "2025-11-25T09:32:59Z",
-      "pushed_at": "2025-11-25T09:00:47Z",
-      "default_branch": "main",
-      "license": "MIT",
-      "featured": false
-    },
-    {
       "name": "ubuntu-dns-manager",
       "full_name": "NarimanKhaleghi/ubuntu-dns-manager",
       "html_url": "https://github.com/NarimanKhaleghi/ubuntu-dns-manager",
@@ -137,23 +120,6 @@
       "updated_at": "2025-11-21T21:42:26Z",
       "pushed_at": "2025-11-21T21:37:28Z",
       "default_branch": "master",
-      "license": null,
-      "featured": false
-    },
-    {
-      "name": "resume",
-      "full_name": "NarimanKhaleghi/resume",
-      "html_url": "https://github.com/NarimanKhaleghi/resume",
-      "description": "",
-      "language": "HTML",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "homepage": "",
-      "created_at": "2026-10-05T08:15:41Z",
-      "updated_at": "2026-10-25T14:51:04Z",
-      "pushed_at": "2026-10-25T14:51:00Z",
-      "default_branch": "main",
       "license": null,
       "featured": false
     },

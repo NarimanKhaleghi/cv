@@ -1,0 +1,233 @@
+Nariman Khaleghi — Resume
+فارسی
+PDF
+Export to PDF
+Destination: Save as PDF
+Margins: Default , margins are already built into the file
+Headers & footers: Off
+Background graphics: On , keeps colors & styling
+Don’t show again
+Cancel
+Open print dialog
+NARIMAN KHALEGHI
+Senior Product Manager | FinTech & Payments
+Tehran, Iran
++98 935 582 4252
+pm@thepm.ir
+linkedin.com/in/NarimanKhaleghi
+github.com/NarimanKhaleghi
+thepm.ir
+Expected salary: 110M Tomans net (negotiable based on conditions and benefits)
+Military status: Exempt (educational deferment)
+Languages: Persian (native) · English (Intermediate — full professional reading comprehension, working written communication, conversational speaking)
+Professional Summary
+Senior Product Manager with 4+ years in product management and 8+ years in digital business . Currently responsible for PutLife , the fintech super-app of Iran Kish Credit Card Co. (a Tejarat Bank subsidiary), with 2M registered users . Launched five products from scratch and built digital products for startups and national-scale platforms in fintech, tax technology, travel, media and e-commerce, and was promoted quickly at four companies . Focused on product discovery, data-driven prioritization and Agile/Scrum delivery , turning complex requirements into measurable business results . Also hands-on with AI : local LLMs, RAG, AI agents, n8n automation and Vibe-Coded MVPs. A hybrid business and engineering background, with experience in strategy, marketing, data, coding and solution design. Comfortable in fast-moving, regulated environments , with a main focus on fintech and payments ; open to any industry that takes product seriously.
+Core Skills
+Product Management
+Product Strategy & Vision · Product Discovery · Roadmap Planning · Feature Prioritization & Delivery · Product Lifecycle Management · PRD Writing · Epics, User Stories & Acceptance Criteria · Requirements Gathering & Analysis · User Research (Surveys, User Interviews, Usability Testing) · A/B Testing & Experiment Design · CRO · Metrics & KPI Definition · OKRs · Business Case Development · Business Analysis · Pain Point Analysis · Competitor & Market Analysis (TAM/SAM/SOM) · Cohort & LTV Analysis
+Agile & Delivery
+Agile/Scrum · Sprint Planning · Release Management · Backlog Refinement · Daily Standups · Sprint Reviews & Demos · Retrospectives · Velocity Tracking · Kanban · Hybrid/Waterfall · SDLC · UAT & QA Collaboration · Change Management · Cross-Functional Collaboration
+Project Management & Business Analysis
+Project Management grounded in PMBOK 7/8 · Business Analysis grounded in BABOK (requirements elicitation, stakeholder analysis, process modeling) · BPMN 2.0 Process Mapping · Business Model Canvas & Value Proposition Design (Osterwalder) · Feasibility Studies & Business Cases · Financial Modeling & Forecasting
+Data & AI
+Data Analysis & Data Visualization (Excel/PivotTables, Power BI, Google Analytics 4 (GA4), Looker Studio ) · Statistics · KPI Dashboards · Cohort/Retention/LTV Tracking · Web Analytics · Databases (basic SQL, vector databases) · Python (Data Analysis, Web Scraping, Data Mining, ML Fundamentals) · Generative AI & LLMs (ChatGPT, Claude, DeepSeek, local LLMs via Ollama/LM Studio) · RAG Pipelines & AI Agents (Claude Code, Codex; configuring agent tools and skills) · n8n Workflow Automation · AI-Assisted Product Workflows for PRDs, requirements, data analysis and user stories, with several times the productivity · Vibe-Coded MVP Prototyping
+Business & Growth
+Go-to-Market (GTM) · Positioning & Value Proposition · Funnel & Conversion Optimization · Retention & Churn Reduction · Product Marketing · Business Development · Market Research & Trends · Pricing · Monetization (freemium & subscription models) · CRM · SEO & ASO · Customer Journey & Customer Experience · Sales-Cycle Design · Budget Ownership
+Design & Technical
+Product Design (UX/UI) ; wireframes → clickable prototypes in Figma, with handoff and validation against PRD & backend services · HTML/CSS/JavaScript · WordPress/WooCommerce · Linux & Windows Server Administration · Cloud Deployment · Networking & Security Fundamentals · Postman/Swagger · POS/IPG Ecosystem & Payment Gateways · Banking & Financial Services (FinTech) Domain
+Tools
+Jira · Confluence · Notion · Trello · Git/GitHub · MS Office (Word, Excel, PowerPoint) · Google Sheets
+Soft Skills
+Stakeholder Management · Analytical & Strategic Thinking · Customer-Centric Mindset · Negotiation · Facilitation · Training · Effective Communication · Teamwork & Leadership · Decision-Making · Problem-Solving · Planning & Follow-Up · Accountability · Presentation Skills · Attention to Detail · Creativity · Conflict Resolution · Empathy · Adaptability · Time Management · Continuous Learning & Improvement
+Experience
+Senior Product Manager, PutLife Super-App
+Feb 2026 – Present (9 mos)
+Iran Kish Credit Card Co. (KICCC) · knowledge-based PSP, subsidiary of Tejarat Bank (principal shareholder)
+Tehran, Iran · Full-time, On-site
+Responsible for PutLife end to end, the company’s flagship fintech super-app for payments, credit and value-added services, with 2M+ registered users and 300K+ active users across Android, iOS and PWA.
+Own product strategy, roadmap and the full product lifecycle, with continuous product discovery and data-driven prioritization against quarterly OKRs while delivery capacity is tight. Lead Agile/Scrum delivery across Android, iOS and PWA squads (sprint planning, backlog refinement, daily standups, sprint reviews, retrospectives and release management), write epics, user stories, acceptance criteria and PRDs in Jira/Confluence with an AI-assisted documentation workflow , manage a 2-person product cell and help with hiring for the product team.
+Led the Kashef security-compliance program, a Shaparak requirement for renewing card-to-card contracts with partner banks. Worked directly with the banks, prioritized fixes by risk across releases and designed workarounds where structural fixes could have caused churn, protecting retention and keeping bank partnerships on track.
+Cut internal payment errors from 24% to 2% through root-cause analysis, bug triage and structured UAT, tracked on Power BI KPI dashboards with cohort, retention and LTV reporting as part of continuous improvement.
+Delivered a portfolio of payment and credit products: the TVO Wallet and Maharat Skill Wallet with Iran’s Technical and Vocational Organization, a Digital Rial (CBDC) wallet , a multi-budget card , SMART field-support software for POS teams and SMART Banking (a customer–banker communication platform for Tejarat Bank). Also ran a blockchain asset-tokenization pilot that let tokenized assets be used as loan collateral (with DiaChain and Nozohoor Tejarat), and was trusted with confidential national-scale projects for Tejarat Bank.
+Took the Modular POS Repair System, a white-label service-management product for POS hardware, from proposal to a sellable release. Ran requirements discovery, aligned stakeholders and designed the modular architecture, and built the CEO-approved business case ( 1.5-year break-even , ~2.8B Tomans projected annual profit ) that created a new revenue line for the company.
+Kept PutLife fully available during a nationwide banking outage that took the POS infrastructure of four major banks offline. Aligned engineering and support teams around one recovery goal, then drove +5% transactions and +10% user growth the next quarter.
+Grew +1,000 daily organic users at zero acquisition cost by improving UX and quality (which raised the app’s Cafe Bazaar rating), building an SEO-optimized landing page and turning the POS field-support team into a zero-budget merchant referral channel. Also launched a merchant services suite (transaction history, reporting, repair requests, paper-roll orders) across the POS/IPG ecosystem, deepening B2B engagement and reducing support calls.
+Senior Product Manager
+Dec 2024 – Feb 2026 (1 yr 3 mos)
+Tiss TSP (Dadeh Pardazi Motamed Tiss) · authorized tax-service provider transmitting e-invoices to Iran’s national Moadian platform (implementer of the store-terminal law)
+Tehran, Iran · Full-time, On-site
+Joined as Project Manager and became Senior Product Manager after four months. Worked as the link between the VP office and the technical and operations teams, managed 5 people directly , oversaw the work of 22 and ran product processes in Jira with a growing focus on platform development and market expansion.
+Rebuilt the core e-invoice submission platform while customer growth was outpacing capacity: redesigned submission queues, added pre-processing validators and planned server expansion. Invoice volume grew from 5.7B to 10.3B (+81%) , reaching ~50% market share of all e-invoices submitted to Moadian, the industry’s key competitive metric. Kept the service fully stable through the 12-day war and received the “Exemplary Colleague” award .
+Shipped the Android tax app for Android POS terminals and mobile phones with a simple, free e-invoicing flow, onboarding thousands of retail B2C merchants (gold and produce trades) through field training and trust-building. Grew users from 20K to 43K (+115%) .
+Redesigned the end-to-end customer experience: mapped the customer journey, improved acquisition and retention with cohort and LTV tracking, launched self-service flows and n8n ticket automation , including a RAG-based AI tax assistant that answered taxpayers’ questions. Complaints fell 83% , the call-response rate reached 99.3% and customer satisfaction improved. Also monetized value-added services (API access, premium support) through annual subscriptions and restructured teams as part of change management.
+Supervised the full rebuild of the company website with SEO and content-structure work that delivered +318% organic traffic in 4 months (35.8K impressions, 2.7K clicks), measured in GA4/Search Console dashboards built in Looker Studio, speeding up customer acquisition.
+Led process improvement and re-documentation for the VP office based on the APQC standard, modeled in BPMN 2.0 through interviews and aligned with the business. This contributed decisively to winning the Iran National Quality Award (2025) as the only authorized tax-service provider ever to receive it.
+Product Manager
+May – Dec 2024 (8 mos)
+Afaq Seir · travel & tourism company; SafarMall, a multi-supplier travel-booking marketplace (PWA)
+Tehran, Iran · Full-time, On-site
+Led SafarMall end to end, from supplier integrations and booking infrastructure to new product lines, and managed a 6-person development team.
+Redesigned the booking funnel and user flows (search, filters, payment and wallet) through A/B testing and data analysis, raising search-to-book conversion from 2.3% to 3.8% (+65%) , cutting payment drop-off from 32% to 19% and increasing reservation completion by 21% .
+Led technical and commercial negotiations with 4 major airlines (Mahan, IranAir, Sepehran, Aseman) and integrated their REST APIs into the booking infrastructure, validated via Postman/Swagger . Ticket issuance dropped from 5 to 3 minutes , domestic flight coverage reached 85% and international coverage 40% .
+Launched two new revenue streams: smart cross-sell of add-on services (travel insurance, hotels, airport transfers) with +132% attach rate , and a luxury product line built on market-needs assessment, two-tier segmentation and pricing, with +35% average order value (AOV) and +28% repeat purchase rate in 6 months.
+Implemented CRM/VOIP and rebuilt the response workflow: response time fell from 5 to 2 minutes , lead-to-customer conversion rose 22% and missed calls fell 21% .
+Delivered 92% of planned Story Points per sprint, shipped the MVP on schedule and cut legacy dependencies by 20% .
+Product Marketing Manager
+Feb 2022 – May 2024 (2 yrs 4 mos)
+Almassazeh Gostar Semnan · knowledge-based manufacturer of dry-mix building materials, including waterproof and fire-resistant gypsum
+Semnan, Iran · Full-time, On-site
+Launched the company’s first online sales channel from scratch, built the dealership and export networks, defined the go-to-market (GTM) strategy and managed a 3-person sales and digital-marketing team.
+Built the company’s first e-commerce store on WordPress/WooCommerce with no prior digital sales, scaling from zero to an average of 3 tons/day in online sales within 10 months .
+Expanded B2B sales across channels: onboarded 14 new dealerships and activated Torob, Sheypoor and Divar, which generated 45% of online sales leads and cut customer acquisition cost (CAC) by 28% . Also built trade relationships with building-materials exporters and closed the company’s first export deals to Iraq, Russia, Afghanistan and Turkey ( 15% of annual sales volume ).
+Led conversion-rate optimization (CRO) and GTM strategy: redesigned landing pages and the purchase funnel, lifting conversion from 1.4% to 3.2% (+129%) , and defined positioning and value propositions for new lines from competitive research and market trends, shortening the sales cycle by 30% .
+Improved technical SEO and web performance : raised PageSpeed from 68 to 100 (desktop) and 54 to 98 (mobile) , cut load time from 6.2s to 1.9s (GTmetrix), reduced bounce rate by 45% and grew organic traffic 120% , measured in GA4 with Looker Studio dashboards. Earned top Google rankings for 5+ strategic keywords and tripled monthly organic impressions .
+Content Strategist & Audience Development Lead
+Feb 2021 – Feb 2022 (1 yr 1 mo)
+Ring Sport · Iran’s specialized automotive tuning & motorsport media
+Tehran, Iran · Part-time, Hybrid
+Led content strategy, on-site multimedia production and audience development for Iran’s specialized automotive tuning and motorsport publication.
+Launched Ring Sport Magazine from scratch with 3 editorial pillars (vehicle reviews, racing event coverage, industry analysis) and on-site multimedia production, growing traffic from zero to +500 daily visits with a 3+ minute average session.
+Earned the trust of SAIPA and Iran Khodro (IKCO) for dedicated reviews of their production vehicles through content quality and media credibility, establishing Ring Sport as one of Iran’s leading automotive tuning references.
+Product Owner
+May 2020 – May 2021 (1 yr 1 mo)
+Sebyan Company · EdTech company; builder of the “Daneshjouyar” platform
+Tehran, Iran · Full-time, On-site
+Launched Daneshjouyar from scratch: a single-window PWA for students’ non-academic university services, created during COVID-19 for remote access. Led needs assessment, user research, market and competitor analysis (TAM/SAM/SOM), benchmarking of global products and roadmap definition.
+Applied Design Thinking from start to finish, from user research to prototyping and usability testing. Benchmarked global products to define the “ Single Window for Student Services ” vision and an executable roadmap, and launched v1 with 14 active student services .
+Built step-by-step request-status tracking and direct student-to-provider connection, cutting status-inquiry tickets by 60% and acquiring 9,000 users from zero within 6 months at a 42% active usage rate .
+Designed and ran end-to-end user research: 120+ surveys and 35+ in-depth user interviews across 12 universities , then prioritized 8 core need areas (welfare, nutrition, dormitory, extracurricular) as the MVP backlog.
+Designed user flows with fewer than 5 clicks and clickable prototypes (Figma/Adobe XD) to replace in-person visits and physical queues, with an 87% success rate in usability testing, plus privacy by design , informed-consent flows and personal-data protection.
+Senior Product Marketing Specialist
+Jan 2018 – Dec 2019 (2 yrs)
+Avangard Tech · a Raymon Amitis holding subsidiary; full-service digital agency & developer of the “Viva Vital” luxury FMCG mineral-water brand
+Tehran, Iran · Part-time, On-site
+Led brand building and digital-marketing delivery for the agency and its FMCG client, covering brand strategy, distribution design and B2B client acquisition.
+Developed the Viva Vital brand during R&D: premium visual identity and positioning, 3 SKUs (Classic, Healthy, Sport) with distinct shelf visibility, and a three-phase GTM plan covering premium pricing, messaging and a regional launch calendar.
+Managed the agency’s digital-marketing unit: acquired 18 new B2B clients ( +120% client base in 3 months ), shipped 7 websites across construction, real-estate and industrial sectors with PageSpeed above 85, and lifted 2.3× organic traffic plus 180% social-media engagement for 12 active clients. Standardized the sales cycle, cutting new-client onboarding time by 40% .
+Researched affluent Tehran consumer behavior and identified four purchase drivers (design, brand story, water quality, social value), shaped a premium B2C distribution model and signed 35+ points of sale (luxury supermarkets and sports clubs in Districts 1–3).
+Senior Digital Marketing Specialist
+Jan 2016 – Jan 2018 (2 yrs 1 mo)
+Bakhtar Flower · online flower & plant retailer
+Tehran, Iran · Full-time, On-site
+Led digital strategy end to end, the digital team and the marketing budget, driving online sales and the e-commerce app.
+Grew monthly online revenue from 120M to 340M+ Tomans (+180%) in 2 years through cross-sell and seasonal bundles, lifted AOV from 560K to 830K Tomans , and launched the e-commerce app, reaching 500+ active installs in 18 months.
+Drove +300% organic traffic (8K to 32K monthly visits ) through SEO, ranking on Google’s top results for 5+ transactional keywords , and ran 12 seasonal campaigns (Valentine’s, Mother’s Day, Yalda) at 4.8× average ROI , with a single-day record of 2,400+ orders .
+Improved CRO and UX by redesigning product pages and the checkout flow, reducing bounce rate from 68% to 41% , and split the Instagram presence into 4 specialized pages , growing total followers to 125K .
+Education
+M.Sc., Industrial Management (Production & Operations) , Semnan University, Faculty of Management | 2023–2026
+B.Sc., Industrial Management , Semnan University, Faculty of Management | 2019–2023
+Additional
+Trader & Financial Market Analyst — self-employed, remote (Jan 2019 – Dec 2024, 6 yrs).
+Photography Instructor (part-time, Sep 2023 – May 2024), Saheb Kosar High School — Advanced Digital Photography (Jan–May 2024) and Introductory Digital Photography (Sep 2023–Jan 2024): 45+ students , 92% end-of-term satisfaction .
+References available from former direct managers at every company upon request.
+نریمان خالقی
+مدیر محصول ارشد | فین‌تک و پرداخت
+تهران، ایران
++98 935 582 4252
+pm@thepm.ir
+linkedin.com/in/NarimanKhaleghi
+github.com/NarimanKhaleghi
+thepm.ir
+حقوق درخواستی: ۱۱۰ میلیون تومان خالص (با توجه به شرایط و مزایا قابل مذاکره است)
+وضعیت نظام‌وظیفه: معاف (معافیت تحصیلی)
+زبان‌ها: فارسی (زبان مادری) · انگلیسی (سطح متوسط — درک کامل متون تخصصی، نگارش کاربردی، مکالمه عمومی)
+خلاصه حرفه‌ای
+مدیر محصول ارشد با بیش از ۴ سال تجربه در مدیریت محصول و بیش از ۸ سال تجربه در کسب‌وکار دیجیتال ، در حال حاضر مسئول محصول پات‌لایف ، سوپراپ فین‌تکی شرکت کارت اعتباری ایران کیش و زیرمجموعه بانک تجارت، با ۲ میلیون کاربر ثبت‌نام‌شده . سابقه راه‌اندازی ۵ محصول از صفر تا یک و توسعه محصولات دیجیتال از استارتاپ‌ها تا پلتفرم‌های ملی و مقیاس‌بالا در حوزه‌های فین‌تک، فناوری مالیاتی، گردشگری، رسانه و تجارت الکترونیک، همراه با سابقه ارتقای سریع درون‌سازمانی در چهار مجموعه . تمرکز حرفه‌ای بر کشف محصول، اولویت‌بندی مبتنی بر داده و اجرای Agile/Scrum و تبدیل نیازمندی‌های پیچیده به نتایج قابل‌اندازه‌گیری کسب‌وکار ، در کنار توانمندی عملی در هوش مصنوعی شامل LLMهای محلی، RAG، عامل‌های هوش مصنوعی، اتوماسیون گردش‌کار با n8n و نمونه‌سازی MVP با Vibe Coding. پروفایل ترکیبی کسب‌وکار و مهندسی با تجربه در استراتژی، بازاریابی، داده، کدنویسی و طراحی راهکار. مناسب محیط‌های سریع و مقررات‌محور ، با تمرکز اصلی بر فین‌تک و پرداخت و آمادگی برای فعالیت در هر صنعتی که محصول را جدی می‌گیرد.
+مهارت‌های کلیدی
+مدیریت محصول
+استراتژی و چشم‌انداز محصول · Product Discovery · برنامه‌ریزی Roadmap · اولویت‌بندی و تحویل قابلیت‌ها · مدیریت چرخه عمر محصول · نگارش PRD · Epics، User Stories و Acceptance Criteria · جمع‌آوری و تحلیل نیازمندی‌ها · پژوهش کاربر (نظرسنجی، مصاحبه و تست کاربردپذیری) · آزمایش مبتنی بر فرضیه و A/B Testing · CRO · تعریف Metrics و KPI · OKR · Business Case · تحلیل کسب‌وکار · تحلیل نقاط درد · تحلیل رقبا و بازار (TAM/SAM/SOM) · تحلیل Cohort و LTV
+Agile و تحویل
+Agile/Scrum · Sprint Planning · Release Management · Backlog Refinement · Daily Standup · Sprint Review & Demo · Retrospective · Velocity Tracking · Kanban · Hybrid/Waterfall · SDLC · همکاری با UAT و QA · Change Management · همکاری و هماهنگی چندتخصصی
+مدیریت پروژه و تحلیل کسب‌وکار
+مدیریت پروژه بر پایه PMBOK 7/8 · تحلیل کسب‌وکار بر پایه BABOK شامل استخراج نیازمندی، تحلیل ذی‌نفعان و مدل‌سازی فرایند · مدل‌سازی فرایند با BPMN 2.0 · Business Model Canvas و Value Proposition Design بر اساس Osterwalder · Feasibility Study و Business Case · مدل‌سازی مالی و پیش‌بینی
+داده و هوش مصنوعی
+تحلیل و مصورسازی داده (Excel/PivotTables، Power BI، GA4، Looker Studio ) · آمار · KPI Dashboard · Cohort/Retention/LTV Tracking · Web Analytics · پایگاه داده (SQL پایه، Vector Database) · Python (تحلیل داده، Web Scraping، Data Mining، مبانی ML) · Generative AI و LLMها (ChatGPT، Claude، DeepSeek، LLMهای محلی با Ollama/LM Studio) · RAG Pipeline و AI Agents (Claude Code، Codex، تنظیم ابزارها و مهارت‌های Agent) · n8n Workflow Automation · AI-Assisted Product Workflows برای PRD، تحلیل نیازمندی و داده و تولید User Story با افزایش چندبرابری بهره‌وری · Vibe-Coded MVP Prototyping
+کسب‌وکار و رشد
+Go-to-Market (GTM) · Positioning و Value Proposition · Funnel و Conversion Optimization · Retention و Churn Reduction · بازاریابی محصول · توسعه کسب‌وکار · تحقیقات بازار و ترندها · Pricing · Monetization (Freemium و Subscription) · CRM · SEO و ASO · Customer Journey و Customer Experience · طراحی Sales Cycle · Budget Ownership
+طراحی و فنی
+Product Design (UX/UI) ، از Wireframe تا Prototype قابل کلیک در Figma، با Handoff و اعتبارسنجی در برابر PRD و Backend Services · HTML/CSS/JavaScript · WordPress/WooCommerce · Linux و Windows Server Administration · Cloud Deployment · مبانی Networking و Security · Postman/Swagger · اکوسیستم POS/IPG و درگاه‌های پرداخت · حوزه بانکداری و خدمات مالی (FinTech)
+ابزارها
+Jira · Confluence · Notion · Trello · Git/GitHub · MS Office (Word، Excel، PowerPoint) · Google Sheets
+مهارت‌های نرم
+Stakeholder Management · Analytical & Strategic Thinking · Customer-Centric Mindset · Negotiation · Facilitation · Training · Effective Communication · Teamwork & Leadership · Decision-Making · Problem-Solving · Planning & Follow-Up · Accountability · Presentation Skills · Attention to Detail · Creativity · Conflict Resolution · Empathy · Adaptability · Time Management · Continuous Learning & Improvement
+سوابق کاری
+مدیر محصول ارشد — سوپراپ پات‌لایف
+اسفند ۱۴۰۴ – تاکنون (۹ ماه)
+شرکت کارت اعتباری ایران کیش · شرکت دانش‌بنیان PSP و زیرمجموعه بانک تجارت، به‌عنوان سهامدار اصلی
+تهران، ایران · تمام‌وقت، حضوری
+مسئولیت End-to-End پات‌لایف، محصول فین‌تکی اصلی شرکت در حوزه پرداخت، اعتبار و خدمات ارزش‌افزوده، با ۲ میلیون+ کاربر ثبت‌نام‌شده و ۳۰۰ هزار+ کاربر فعال در Android، iOS و PWA.
+مدیریت استراتژی محصول، Roadmap و کل چرخه عمر محصول، انجام مستمر Product Discovery و اولویت‌بندی مبتنی بر داده بر اساس OKRهای فصلی با هدف بیشینه‌کردن سرعت تحویل در شرایط محدودیت ظرفیت مهندسی، هدایت توسعه Agile/Scrum در تیم‌های چندتخصصی Android، iOS و PWA شامل Sprint Planning، Backlog Refinement، Daily Standup، Sprint Review، Retrospective و Release Management، تدوین Epics، User Stories، Acceptance Criteria و PRD در Jira/Confluence با استفاده از AI-Assisted Documentation & Analysis Workflow ، مدیریت یک سلول محصول ۲ نفره و مشارکت در جذب نیرو برای واحد توسعه محصول.
+رهبری برنامه انطباق امنیتی کاشف ، پیش‌نیاز شاپرک برای تمدید قراردادهای کارت‌به‌کارت با بانک‌های همکار، پیگیری End-to-End ذی‌نفعان با بانک‌ها، اولویت‌بندی ریسک‌محور اقدامات اصلاحی در Releaseها و طراحی راهکارهای جایگزین در مواردی که اصلاحات ساختاری می‌توانست باعث Churn شود، حفظ Retention و هم‌زمان رفع موانع همکاری بانکی.
+کاهش خطاهای داخلی پرداخت از ۲۴٪ به ۲٪ با Root-Cause Analysis، Bug Triage و UAT ساختاریافته، پایش از طریق داشبوردهای KPI در Power BI و Cohort، Retention و LTV Tracking در چرخه‌های بهبود مستمر.
+تحویل مجموعه‌ای از محصولات پرداخت و اعتباری شامل کیف پول TVO و کیف پول مهارت با سازمان فنی و حرفه‌ای ایران، کیف پول ریال دیجیتال (CBDC) ، کارت چندبودجه‌ای ، نرم‌افزار SMART برای تیم‌های پشتیبانی POS و SMART Banking به‌عنوان پلتفرم ارتباط مشتری–بانکدار برای بانک تجارت، اجرای پایلوت توکنیزه‌کردن دارایی‌های بلاک‌چینی برای استفاده از دارایی‌های توکنیزه‌شده به‌عنوان وثیقه وام با همکاری دیاچین و نوزهور تجارت، و واگذاری پروژه‌های راهبردی محرمانه در مقیاس ملی برای بانک تجارت.
+مدیریت پروژه سامانه ماژولار تعمیرات POS ، یک محصول White-Label برای مدیریت خدمات سخت‌افزار POS، از Proposal تا محصول قابل فروش، مسئولیت Discovery نیازمندی، هم‌راستاسازی ذی‌نفعان و Solution Design برای معماری ماژولار، طراحی اقتصاد محصول بر اساس Business Case مورد تأیید مدیرعامل با نقطه سربه‌سر ۱.۵ ساله و حدود ۲.۸ میلیارد تومان سود سالانه پیش‌بینی‌شده ، ایجاد یک جریان درآمدی جدید برای شرکت.
+حفظ کامل دسترس‌پذیری پات‌لایف در جریان اختلال سراسری بانکی که زیرساخت POS چهار بانک بزرگ را از مدار خارج کرد، هم‌راستا کردن تیم‌های مهندسی و پشتیبانی حول یک هدف واحد برای بازیابی و دستیابی در فصل بعد به +۵٪ تراکنش و +۱۰٪ رشد کاربران .
+ایجاد +۱۰۰۰ کاربر ارگانیک روزانه با هزینه جذب صفر از طریق بهبود UX و کیفیت که امتیاز پات‌لایف در کافه‌بازار را افزایش داد (ASO)، طراحی Landing Page بهینه‌شده برای SEO و تبدیل نیروی پشتیبانی میدانی POS به کانال ارجاع پذیرندگان بدون بودجه، راه‌اندازی مجموعه خدمات پذیرندگان شامل مشاهده تراکنش، گزارش‌گیری، درخواست تعمیرات و سفارش رول کاغذ در اکوسیستم POS/IPG که تعامل B2B را عمیق‌تر و تماس‌های پشتیبانی را کاهش داد.
+مدیر محصول ارشد
+آذر ۱۴۰۳ – بهمن ۱۴۰۴ (۱ سال و ۳ ماه)
+شرکت داده پردازی معتمد تیس (TSP) · ارائه‌دهنده مجاز خدمات مالیاتی و ارسال‌کننده صورتحساب‌های الکترونیکی به سامانه ملی مودیان، مجری قانون پایانه‌های فروشگاهی
+تهران، ایران · تمام‌وقت، حضوری
+به‌عنوان مدیر پروژه وارد شدم و پس از حدود چهار ماه به مدیر محصول ارشد ارتقا پیدا کردم. نقش پل ارتباطی بین دفتر معاونت و تیم‌های فنی و عملیاتی را داشتم، مدیریت مستقیم ۵ نفر و نظارت بر عملکرد ۲۲ نفر ، و مدیریت فرایندهای محصول در Jira با تمرکز فزاینده بر توسعه پلتفرم و گسترش بازار.
+بهینه‌سازی پلتفرم ارسال صورتحساب الکترونیکی در شرایط رشد سریع‌تر از ظرفیت، بازطراحی Submission Queueها، افزودن Pre-Processing Validatorها و برنامه‌ریزی توسعه سرور، افزایش حجم صورتحساب از ۵.۷B به ۱۰.۳B (+۸۱٪) و دستیابی به ~۵۰٪ سهم بازار از کل صورتحساب‌های ارسالی به مودیان، مهم‌ترین KPI رقابتی صنعت. حفظ پایداری کامل سرویس در جنگ ۱۲ روزه و دریافت جایزه «همکار نمونه» .
+تحویل اپلیکیشن مالیاتی اندروید برای پایانه‌های POS اندرویدی و تلفن همراه با فرایند رایگان و ساده‌شده ارسال صورتحساب الکترونیکی، جذب هزاران پذیرنده خرده‌فروش B2C در حوزه طلا و محصولات کشاورزی از طریق اعتمادسازی و آموزش میدانی، رشد کاربران از ۲۰K به ۴۳K (+۱۱۵٪) .
+پیاده‌سازی کامل تجربه مشتری (Customer Experience)، طراحی Customer Journey، بهبود Acquisition و Retention با Cohort و LTV Tracking، ایجاد Self-Service Flow و n8n Ticket Automation شامل یک دستیار مالیاتی مبتنی بر RAG که سؤالات مودیان را پاسخ می‌داد و شکایات را ۸۳٪ کاهش داد ، دستیابی به ۹۹.۳٪ نرخ پاسخ‌گویی تماس‌ها و بهبود شاخص‌های رضایت مشتری. درآمدزایی از خدمات ارزش‌افزوده مانند API Access و Premium Support از طریق اشتراک سالانه و بازطراحی ساختار تیم‌ها در قالب Change Management.
+هدایت بازسازی کامل وب‌سایت شرکت همراه با SEO و بهینه‌سازی ساختار محتوا و ایجاد +۳۱۸٪ رشد ترافیک ارگانیک در ۴ ماه (۳۵.۸K Impression، ۲.۷K Click)، اندازه‌گیری‌شده در داشبوردهای GA4/Search Console در Looker Studio، تسریع جذب مشتری.
+رهبری بهبود فرایند و مستندسازی مجدد عملیات دفتر معاونت بر اساس استاندارد APQC و مدل‌سازی آن با BPMN 2.0 به‌صورت مصاحبه‌محور و هم‌راستا با کسب‌وکار، مشارکت تعیین‌کننده در کسب جایزه ملی کیفیت ایران ۱۴۰۴ / ۲۰۲۵ به‌عنوان تنها ارائه‌دهنده مجاز خدمات مالیاتی که تاکنون این جایزه را دریافت کرده است.
+مدیر محصول
+اردیبهشت – آذر ۱۴۰۳ (۸ ماه)
+آفاق سیر · شرکت گردشگری و سفر، سفرمال، مارکت‌پلیس چندتأمین‌کننده رزرو سفر (PWA)
+تهران، ایران · تمام‌وقت، حضوری
+مسئول کامل سفرمال، از یکپارچه‌سازی تأمین‌کنندگان و زیرساخت رزرو تا خطوط محصول جدید، با رهبری تیم توسعه ۶ نفره.
+بازطراحی Booking Funnel و User Flowهای جست‌وجو، فیلتر، پرداخت و Wallet با Hypothesis-Driven Experimentation / A/B Testing و Data Analysis، افزایش Search-to-Book Conversion از ۲.۳٪ به ۳.۸٪ (+۶۵٪) ، کاهش Payment Drop-Off از ۳۲٪ به ۱۹٪ و افزایش Reservation Completion به میزان ۲۱٪ .
+رهبری مذاکرات فنی و تجاری با ۴ ایرلاین بزرگ (ماهان، ایران‌ایر، سپهران، آسمان) و یکپارچه‌سازی REST API آن‌ها در زیرساخت رزرو، اعتبارسنجی با Postman/Swagger، کاهش زمان صدور بلیت از ۵ به ۳ دقیقه ، افزایش پوشش پروازهای داخلی به ۸۵٪ و بین‌المللی به ۴۰٪ .
+راه‌اندازی دو موتور Monetization: Cross-Sell هوشمند خدمات جانبی شامل بیمه سفر، هتل و ترانسفر فرودگاهی با +۱۳۲٪ Attach Rate ، و خط محصول لوکس مبتنی بر Market Need Assessment، Segmentation دوسطحی و Pricing با +۳۵٪ AOV و +۲۸٪ Repeat Purchase Rate طی ۶ ماه.
+پیاده‌سازی CRM/VOIP و بازطراحی Workflow پاسخ‌گویی، کاهش زمان پاسخ از ۵ به ۲ دقیقه ، افزایش Lead-to-Customer Conversion به میزان ۲۲٪ و کاهش تماس‌های از دست‌رفته ۲۱٪ .
+تحویل ۹۲٪ از Story Pointهای برنامه‌ریزی‌شده در هر Sprint، عرضه MVP طبق برنامه و کاهش ۲۰٪ وابستگی‌های Legacy .
+مدیر بازاریابی محصول
+بهمن ۱۴۰۰ – اردیبهشت ۱۴۰۳ (۲ سال و ۴ ماه)
+الماسازه گستر سمنان · تولیدکننده دانش‌بنیان مصالح ساختمانی خشک و نوآورانه با تمرکز بر گچ‌های ضدآب و ضدحریق
+سمنان، ایران · تمام‌وقت، حضوری
+رهبری راه‌اندازی Zero-to-One نخستین کانال فروش آنلاین شرکت، توسعه شبکه نمایندگی و صادرات، تعریف استراتژی GTM، مدیریت تیم ۳ نفره فروش و دیجیتال مارکتینگ.
+راه‌اندازی E-Commerce از صفر با WordPress/WooCommerce در شرایط نبود سابقه فروش دیجیتال، رساندن فروش آنلاین از صفر به میانگین ۳ تن در روز طی ۱۰ ماه.
+توسعه چندکاناله B2B، جذب ۱۴ نمایندگی جدید و فعال‌سازی ترب، شیپور و دیوار که ۴۵٪ سرنخ‌های فروش آنلاین را ایجاد کردند و CAC را ۲۸٪ کاهش دادند ، ایجاد روابط تجاری با صادرکنندگان مصالح و فراهم‌کردن نخستین معاملات صادراتی شرکت با عراق، روسیه، افغانستان و ترکیه معادل ۱۵٪ حجم فروش سالانه .
+CRO و GTM Strategy، بازطراحی Landing Page و Purchase Funnel و افزایش Conversion Rate از ۱.۴٪ به ۳.۲٪ (+۱۲۹٪) ، تعریف Positioning و Value Proposition برای خطوط محصول جدید بر اساس Competitive Analysis، Market Research و Market Trends، کاهش ۳۰٪ چرخه فروش .
+SEO فنی و Web Performance ، افزایش PageSpeed از ۶۸ به ۱۰۰ در دسکتاپ و ۵۴ به ۹۸ در موبایل ، کاهش زمان بارگذاری از ۶.۲ به ۱.۹ ثانیه در GTmetrix، کاهش Bounce Rate به میزان ۴۵٪ و رشد Organic Traffic به میزان ۱۲۰٪ با GA4 و داشبوردهای شخصی Looker Studio، رتبه‌های برتر گوگل برای ۵+ کلمه کلیدی استراتژیک و ۳ برابر شدن Impressionهای ارگانیک ماهانه .
+استراتژیست محتوا و مدیر توسعه مخاطب
+بهمن ۱۳۹۹ – بهمن ۱۴۰۰ (۱ سال و ۱ ماه)
+رینگ اسپرت · رسانه تخصصی ایران در حوزه تیونینگ خودرو و موتوراسپرت
+تهران، ایران · پاره‌وقت، ترکیبی
+مالکیت کامل استراتژی محتوا، تولید چندرسانه‌ای میدانی و توسعه مخاطب رسانه تخصصی تیونینگ خودرو و موتوراسپرت.
+راه‌اندازی Zero-to-One مجله رینگ اسپرت با ۳ محور محتوایی شامل بررسی خودرو، پوشش رویدادهای مسابقه‌ای و تحلیل صنعت، تولید چندرسانه‌ای در محل و رساندن ترافیک از صفر به +۵۰۰ بازدید روزانه با میانگین Session بیش از ۳ دقیقه .
+جلب اعتماد سایپا و ایران‌خودرو برای بررسی اختصاصی خودروهای تولیدی آن‌ها از طریق کیفیت محتوا و اعتبار رسانه، تثبیت رینگ اسپرت به‌عنوان یکی از مراجع اصلی ایران در حوزه تیونینگ خودرو.
+مالک محصول
+اردیبهشت ۱۳۹۹ – اردیبهشت ۱۴۰۰ (۱ سال و ۱ ماه)
+شرکت صبیان · شرکت EdTech و سازنده پلتفرم «دانشجویار»
+تهران، ایران · تمام‌وقت، حضوری
+مالک Zero-to-One دانشجویار، یک PWA یکپارچه برای خدمات غیرآموزشی دانشگاه که در دوران کرونا برای دسترسی غیرحضوری شکل گرفت. مسئول Needs Assessment، User Research، تحلیل بازار و رقبا (TAM/SAM/SOM)، Benchmarking محصولات جهانی و تعریف Roadmap.
+اجرای کامل Design Thinking از Empathy-Driven User Research تا Prototyping و Usability Testing، Benchmark محصولات مشابه جهانی برای تعریف چشم‌انداز «پنجره واحد خدمات دانشجویی» و تبدیل آن به Roadmap اجرایی، عرضه نسخه اول با ۱۴ خدمت فعال دانشجویی .
+ایجاد Step-by-Step Request Status Tracking و ارتباط مستقیم دانشجو با ارائه‌دهنده خدمت، کاهش تیکت‌های پیگیری وضعیت به میزان ۶۰٪ ، جذب ۹۰۰۰ کاربر از صفر طی ۶ ماه با ۴۲٪ Active Usage Rate (Activation) .
+طراحی و اجرای کامل User Research شامل ۱۲۰+ Survey و ۳۵+ In-Depth Interview در ۱۲ دانشگاه ، استخراج و اولویت‌بندی ۸ خوشه اصلی نیاز شامل رفاه، تغذیه، خوابگاه و فوق‌برنامه به‌عنوان پایه MVP Backlog.
+طراحی User Flowهای کمتر از ۵ کلیک و Prototypeهای قابل کلیک با Figma/Adobe XD برای جایگزینی مراجعات حضوری و صف‌های فیزیکی، ۸۷٪ نرخ موفقیت در Usability Testing ، همراه با Privacy by Design و فرایندهای رضایت آگاهانه.
+کارشناس ارشد بازاریابی محصول
+دی ۱۳۹۶ – آذر ۱۳۹۸ (۲ سال)
+آوانگارد تک · زیرمجموعه هلدینگ رایمون آمی‌تیس، آژانس خدمات کامل دیجیتال و توسعه‌دهنده برند لوکس آب معدنی ویوا ویتال در حوزه FMCG
+تهران، ایران · پاره‌وقت، حضوری
+مالکیت ساخت برند و ارائه خدمات دیجیتال مارکتینگ برای آژانس و مشتری FMCG آن، شامل استراتژی برند، طراحی توزیع و جذب مشتری B2B.
+توسعه برند ویوا ویتال در مرحله R&D، طراحی هویت بصری Premium و Positioning، طراحی ۳ SKU شامل Classic، Healthy و Sport با Shelf Visibility متفاوت، تدوین Roadmap سه‌مرحله‌ای GTM شامل Premium Pricing، Messaging Framework و تقویم Launch منطقه‌ای مرحله‌بندی‌شده.
+مدیریت واحد دیجیتال مارکتینگ آژانس، جذب ۱۸ مشتری B2B جدید و رشد ۱۲۰٪ تعداد مشتریان در ۳ ماه ، تحویل ۷ وب‌سایت برای مشتریان حوزه‌های ساخت‌وساز، املاک و صنایع با PageSpeed بالاتر از ۸۵، ایجاد ۲.۳ برابر Organic Traffic و ۱۸۰٪ رشد Social Engagement برای ۱۲ مشتری فعال، استانداردسازی کامل چرخه فروش و کاهش ۴۰٪ زمان Onboarding مشتریان جدید.
+تحقیق بازار و توزیع: تحلیل رفتار مصرف‌کننده مرفه تهران و استخراج ۴ عامل کلیدی تصمیم خرید شامل طراحی، داستان برند، کیفیت آب و ارزش اجتماعی، طراحی مدل Premium B2C Distribution و عقد قرارداد با ۳۵+ نقطه فروش شامل سوپرمارکت‌های لوکس و باشگاه‌های ورزشی Premium در مناطق ۱ تا ۳.
+کارشناس ارشد بازاریابی دیجیتال
+دی ۱۳۹۴ – دی ۱۳۹۶ (۲ سال و ۱ ماه)
+گل باختر · فروشگاه آنلاین گل و گیاه
+تهران، ایران · تمام‌وقت، حضوری
+مسئولیت End-to-End استراتژی دیجیتال، تیم دیجیتال و بودجه بازاریابی، رشد فروش آنلاین و اپلیکیشن تجارت الکترونیک.
+افزایش درآمد ماهانه فروش آنلاین از ۱۲۰ میلیون به ۳۴۰+ میلیون تومان (+۱۸۰٪) طی ۲ سال با Cross-Sell و بسته‌های فروش فصلی، افزایش AOV از ۵۶۰K به ۸۳۰K تومان ، راه‌اندازی اپلیکیشن E-Commerce و دستیابی به ۵۰۰+ نصب فعال طی ۱۸ ماه.
+ایجاد +۳۰۰٪ رشد Organic Traffic از ۸K به ۳۲K بازدید ماهانه با SEO، رتبه‌های برتر گوگل برای ۵+ کلمه کلیدی تراکنشی، اجرای ۱۲ کمپین فصلی شامل ولنتاین، روز مادر و یلدا با میانگین ROI معادل ۴.۸ برابر ، ثبت رکورد ۲۴۰۰+ سفارش در یک روز .
+CRO و UX، بازطراحی صفحات محصول و Checkout Flow و کاهش Bounce Rate از ۶۸٪ به ۴۱٪ ، تفکیک حضور اینستاگرام به ۴ صفحه تخصصی و رساندن مجموع دنبال‌کنندگان به ۱۲۵ هزار نفر .
+تحصیلات
+کارشناسی ارشد مدیریت صنعتی — تولید و عملیات ، دانشگاه سمنان، دانشکده مدیریت | ۱۴۰۲–۱۴۰۵
+کارشناسی مدیریت صنعتی ، دانشگاه سمنان، دانشکده مدیریت | ۱۳۹۸–۱۴۰۲
+اطلاعات تکمیلی
+معامله‌گر و تحلیلگر بازارهای مالی — خوداشتغال، دورکاری (دی ۱۳۹۷ – آذر ۱۴۰۳، ۶ سال).
+مدرس عکاسی (پاره‌وقت، شهریور ۱۴۰۲ – اردیبهشت ۱۴۰۳)، دبیرستان صاحب کوثر — عکاسی دیجیتال پیشرفته (دی ۱۴۰۲ – اردیبهشت ۱۴۰۳) و عکاسی دیجیتال مقدماتی (شهریور – دی ۱۴۰۲): ۴۵+ دانش‌آموز ، ۹۲٪ رضایت پایان دوره .
+معرفی‌نامه از مدیران مستقیم سابق در تمام شرکت‌ها ، در صورت نیاز قابل ارائه است.

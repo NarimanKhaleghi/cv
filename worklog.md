@@ -35,3 +35,34 @@ Stage Summary:
 - Deliverables: public/site/* (source of truth), download/nariman-thepm-portfolio.zip (push to GitHub → Settings→Pages→GitHub Actions → run "Weekly projects sync" once).
 - Key decisions: no framework/no build (user maintainability + GitHub Pages), data-driven sections registry (add/remove in main.js SECTION_ORDER), README fetched live from raw.githubusercontent.com so docs are always fresh, single config source (data/config.js) shared by site + updater.
 - User follow-ups: optionally add Telegram/WhatsApp to data/config.js contact array; adjust excludeRepos (e.g. "resume", "cv") if unwanted; thepm.ir currently hosts blog repo — site works on any domain/subdomain via relative paths.
+
+---
+Task ID: 2
+Agent: Main agent (Z.ai)
+Task: v2 "Journey" redesign per user feedback — light/dark themes, progressive disclosure (minimal first view, click-to-read), exciting animations, hero photo from GitHub profile, résumé CTA → cv.thepm.ir, push guide for github.com/narimankhaleghi/cv, content re-verified against upload/my-cv.html.
+
+Work Log:
+- Re-extracted resume text (scripts/cv-text.txt) and diffed against site data — content already faithful; fixed two small mismatches ("45% of online sales leads", added trader/photographer side-quests to edu chapter).
+- Downloaded GitHub avatar → assets/img/profile.jpg (460×460 B/W portrait). Verified cv.thepm.ir live (resume repo page).
+- Full rebuild of the site (kept zero-framework architecture):
+  - Theme engine (assets/js/core/theme.js + tokens.css): data-theme dark/light, localStorage "nk-theme", system-preference default, no-FOUC inline head script, View Transitions circular wipe w/ fallback, theme-color meta sync.
+  - New chapter set (main.js CHAPTERS + content.*.js "chapters"): cover(00) about(01) numbers(02) journey(03) toolbox(04) lab(05) edu(06) contact(07); side flight-rail with dots+tooltips; mobile fullscreen menu.
+  - Progressive disclosure: about teaser→"read more", journey stations (8 accordion cards with full resume bullets), toolbox drawers (8), projects cards→README modal. Accordion = grid-template-rows 0fr→1fr.
+  - Journey signature: vertical rail fill synced to scroll, station nodes light up as passed, plane icon marker, promo badges.
+  - Effects: boarding-pass loader with stamp slam + confetti (once/session, click-to-skip), word-mask name reveal (Persian-safe whole words), rotating SVG ring around photo, float/hover photo frame, stickers parallax, magnetic buttons, tilt cards, marquees, custom cursor, count-up counters, grain, easter egg (3× sticker click).
+  - Résumé CTA everywhere: nav chip, cover ghost button, destination card → config.resumeUrl (https://cv.thepm.ir), target _blank.
+  - config.js: siteUrl → narimankhaleghi.github.io/cv/, resumeUrl added, excludeRepos += cv, resume; contact += Résumé. projects.json refiltered → 13 repos (API rate-limited so filtered locally; Action will regenerate on GitHub).
+  - Removed CNAME (thepm.ir root is taken by blog repo); documented optional subdomain path. Fixed deploy-pages.yml broken YAML (branches: ain] → [main]).
+- Browser QA (agent-browser, 1440×900 + 390×844, EN/FA, light/dark): found & fixed:
+  1) SVG textPath ring invisible under RTL (inherited direction) → direction:ltr + unicode-bidi:isolate;
+  2) ring text unreadable over photo frame → paint-order stroke halo (bg-colored) + radius 93 + single repetition tuned to circumference (12px/.32em);
+  3) phone number bidi ("4252 582 935 98+") → unicode-bidi:plaintext on .channel .val;
+  4) LTR README content right-aligned in RTL page → .md[dir=ltr]{text-align:left};
+  5) deploy workflow YAML typo (would block deploys).
+- Verified: 8 chapters/8 stations/8 drawers/13 projects/8 rail dots, no console errors; loader, menu, modal, filters, count-ups, both themes, both languages, mobile menu & journey.
+- Packaged download/nariman-thepm-journey.zip (47 files, 94KB). Wrote PUSH-GUIDE.fa.md (3 push methods, token help, Pages setup, sync run, troubleshooting, custom subdomain) + rewrote README.md (v2 structure/editing docs).
+
+Stage Summary:
+- Deliverables: public/site/* (source of truth), download/nariman-thepm-journey.zip, PUSH-GUIDE.fa.md inside the zip.
+- Key decisions: theme = user-toggleable B/W neubrutalism (both modes hard-shadow); first screen minimal with click-to-expand everywhere; journey metaphor carried by loader/rail/stations vocabulary; résumé stays on its own domain (cv.thepm.ir) rather than embedding.
+- User next steps: push zip contents to github.com/NarimanKhaleghi/cv (guide inside), Settings→Pages→GitHub Actions, run "Weekly projects sync" once; optionally add subdomain CNAME (e.g. me.thepm.ir).
