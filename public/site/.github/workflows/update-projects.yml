@@ -1,0 +1,68 @@
+name: Weekly projects sync
+
+on:
+  schedule:
+    - cron: "30 4 * * 1"   # every Monday 04:30 UTC (≈ 08:00 Tehran)
+  workflow_dispatch:        # manual run: Actions tab → Weekly projects sync → Run
+
+permissions:
+  contents: write           # push the refreshed projects.json
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch latest public repos → data/projects.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/fetch-projects.mjs
+
+      - name: Commit refreshed data (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/projects.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(data): weekly projects sync"
+            git push
+          fi
+
+  # NOTE: pushes made with GITHUB_TOKEN do NOT trigger other workflows,
+  # so we re-deploy Pages right here instead of relying on deploy-pages.yml.
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
