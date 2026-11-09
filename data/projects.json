@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-02T12:47:58.422Z",
+  "generatedAt": "2026-11-09T13:15:24.843Z",
   "source": "github-actions",
   "user": "NarimanKhaleghi",
-  "count": 13,
+  "count": 12,
   "repos": [
     {
       "name": "Markdown_Converter",
@@ -204,23 +204,6 @@
       "created_at": "2026-08-01T07:45:32Z",
       "updated_at": "2026-08-01T08:34:49Z",
       "pushed_at": "2026-08-01T08:34:22Z",
-      "default_branch": "main",
-      "license": null,
-      "featured": false
-    },
-    {
-      "name": "hasto",
-      "full_name": "NarimanKhaleghi/hasto",
-      "html_url": "https://github.com/NarimanKhaleghi/hasto",
-      "description": "This is Hasto MVP",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "homepage": "",
-      "created_at": "2026-07-20T10:47:48Z",
-      "updated_at": "2026-07-20T21:52:44Z",
-      "pushed_at": "2026-07-20T21:52:37Z",
       "default_branch": "main",
       "license": null,
       "featured": false
